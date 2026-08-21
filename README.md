@@ -20,3 +20,7 @@
 - Connect to Gtihub
     - Make sure to add a .gitignore before pushing anything
 - Create a child theme
+- Install Classic Editor plugin
+- Install ACF plugin
+    - JA of IT will have login detail for Pro
+
