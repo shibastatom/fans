@@ -21,20 +21,6 @@ $get_general_block_options = get_sub_field(
 );
 $gbo = $get_general_block_options;
 
-$section_classes = array( 'content-block', $block_slug );
-
-$padding = get_sub_field( 'padding' );
-if ( $padding ) {
-	$section_classes[] = 'padding-' . $padding;
-}
-
-$container_width = get_sub_field( 'container_width' );
-if ( $container_width ) {
-	$section_classes[] = 'container-' . $container_width;
-}
-
-$section_classes = implode( ' ', $section_classes );
-
 $heading    = $gbo['heading'];
 $subheading = get_sub_field( 'subheading' );
 $button     = get_sub_field( 'button' );
