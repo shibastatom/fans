@@ -32,6 +32,10 @@
     - You will find the file for the block in 'template-parts/acf-blocks/'
 
 
+## ASTRA RELATED
+### Page
+- When creating a page, to make use of the container widths, adjust the value to the Astra Settings -> 'Container Layout'.
+
 ## TAILWIND
 Styling is done with Tailwind CSS v4, run via the standalone CLI (no Node/npm needed).
 
