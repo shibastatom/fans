@@ -1,16 +1,17 @@
 <?php
 $block_slug = 'section-style-1';
 include get_stylesheet_directory() . '/template-parts/acf-blocks/partials/general-block-options.php';
+
 ?>
 
 <section
-	class="block-padding bg-gray-300"
+	class="st-section-s1 bg-gray-300 w-full"
 	style=""
 	>
-	<div class="content-container">
+	<div class="<?= $gbo_container_width; ?>">
 		<div class="content">
-			<?php if ( $heading ) : ?>
-				<h2 class="content-block__heading !text-secondary"><?php echo esc_html( $heading ); ?>??</h2>
+			<?php if ( $gbo_heading ) : ?>
+				<h2 class="content-block__heading !text-secondary"><?php echo esc_html( $gbo_heading ); ?>??</h2>
 			<?php endif; ?>
 
 			<?php if ( $image ) : ?>

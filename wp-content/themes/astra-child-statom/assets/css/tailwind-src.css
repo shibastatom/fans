@@ -4,8 +4,9 @@
 	--color-primary: #252a35;
 	--color-secondary: #967d54;
 	--color-tertiary: #3d6655;
+	--container-site: 1200px;
 }
 
-.block-padding {
-	@apply py-24 px-4;
+.st-section-s1 {
+	@apply py-24 px-4 w-full;
 }

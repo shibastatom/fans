@@ -9,7 +9,7 @@
  *   $block_slug = 'section-style-1';
  *   include get_stylesheet_directory() . '/template-parts/acf-blocks/partials/general-block-options.php';
  *
- * Provides: $section_classes, $heading, $subheading, $button, $image.
+ * Provides: $heading, $subheading, $button, $image, $container_width.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -21,7 +21,26 @@ $get_general_block_options = get_sub_field(
 );
 $gbo = $get_general_block_options;
 
-$heading    = $gbo['heading'];
-$subheading = get_sub_field( 'subheading' );
-$button     = get_sub_field( 'button' );
-$image      = get_sub_field( 'image' );
+$gbo_heading = $gbo['heading'];
+
+$get_gbo_container_width = $gbo['container_width'];
+$gbo_container_width = '';
+switch ( $get_gbo_container_width ) {
+	case 'narrow':
+		$gbo_container_width = 'max-w-3xl mx-auto';
+		break;
+	case 'full-width':
+		$gbo_container_width = '';
+		break;
+	case 'container':
+		$gbo_container_width = 'ast-container';
+		break;
+	default:
+		$gbo_container_width = 'ast-container';
+		break;
+}
+
+$subheading      = get_sub_field( 'subheading' );
+$button          = get_sub_field( 'button' );
+$image           = get_sub_field( 'image' );
+$container_width = get_sub_field( 'container_width' );
