@@ -24,3 +24,10 @@
 - Install ACF plugin
     - JA of IT will have login detail for Pro
 
+
+## ACF BLOCKS
+### Create new block
+- Field group, Page Builder -> Content Blocks(Flexible Content).
+- page.php will find the block
+    - You will find the file for the block in 'template-parts/acf-blocks/'
+
