@@ -23,3 +23,49 @@
 .bg-secondary {
 	@apply text-black;
 }
+
+.st-btn-primary {
+	position: relative;
+	isolation: isolate;
+	@apply inline-block rounded-none px-6 py-3 bg-primary text-white uppercase transition-colors duration-300 border-1 border-text;
+}
+.st-btn-primary::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background-color: var(--color-text);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.3s ease;
+}
+.st-btn-primary:hover {
+	@apply text-primary;
+}
+.st-btn-primary:hover::before {
+	transform: scaleX(1);
+}
+
+.st-btn-secondary {
+	position: relative;
+	isolation: isolate;
+	@apply inline-block rounded-none px-6 py-3 bg-secondary text-primary uppercase transition-colors duration-300 border-1 border-secondary;
+}
+.st-btn-secondary::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background-color: var(--color-text);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.3s ease;
+}
+.st-btn-secondary:hover {
+	@apply text-primary;
+}
+.st-btn-secondary:hover::before {
+	transform: scaleX(1);
+}
+
+
