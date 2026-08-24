@@ -12,20 +12,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<section class="st-section-s1 bg-primary">
-	<div class="ast-container flex flex-col md:flex-row items-center gap-8">
-		<div class="page-hero__content md:w-1/2">
-			<p class="uppercase !text-secondary">London Residential & Mixed-use development</p>
-			<h1 class="_heading !text-white uppercase">Building exceptional <span class="text-secondary">places.</span></h1>
-			<p class="st-hero-text-lead color-text text-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-			<button type="button" class="st-btn-secondary">Secondary</button>
-			<button type="button" class="st-btn-primary">Primary</button>
+<section class="st-section-s2 bg-primary min-h-[80vh] flex">
+	<div class="ast-container flex flex-col md:flex-row items-stretch gap-8">
+		<!-- LEFT SIDE -->
+		<div class="page-hero__content flex-1 flex flex-col justify-center">
+			<div>
+				<p class="uppercase !text-secondary">London Residential & Mixed-use development</p>
+				<h1 class="_heading !text-white uppercase">Building exceptional <span class="text-secondary">places.</span></h1>
+				<p class="st-hero-text-lead color-text text-text">Fancourt Property Group develops outstanding residential and mixed-use communities across London; acquired, optimised and delivered without compromise.</p>
+				<button type="button" class="st-btn-secondary">Secondary</button>
+				<button type="button" class="st-btn-primary">Primary</button>
+			</div>
 		</div>
 
+		<!-- RIGHT SIDE -->
 		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="page-hero__image bg-gray-300 md:w-1/2">
-				<?php the_post_thumbnail( 'large', array( 'class' => 'w-full h-auto' ) ); ?>
-			</div>
+		<div class="flex-1 flex justify-center">
+			<?php the_post_thumbnail( 'large', array( 'class' => '!h-full !w-full object-cover' ) ); ?>
+		</div>
 		<?php endif; ?>
 	</div>
 </section>

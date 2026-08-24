@@ -9,7 +9,7 @@
 }
 
 .st-section-s1 {
-	@apply py-24 px-4 w-full;
+	@apply py-24 w-full;
 }
 
 .st-hero-text-lead {
