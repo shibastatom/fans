@@ -7,11 +7,15 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
     --color-gray-300: oklch(87.2% 0.01 258.338);
+    --color-black: #000;
+    --color-white: #fff;
     --spacing: 0.25rem;
     --container-3xl: 48rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-primary: #252a35;
     --color-secondary: #967d54;
+    --color-text: #f6f2e8b8;
   }
 }
 @layer base {
@@ -184,21 +188,68 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .flex {
+    display: flex;
+  }
+  .h-auto {
+    height: auto;
+  }
   .w-full {
     width: 100%;
   }
   .max-w-3xl {
     max-width: var(--container-3xl);
   }
+  .flex-col {
+    flex-direction: column;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
   .bg-gray-300 {
     background-color: var(--color-gray-300);
   }
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
   .\!text-secondary {
     color: var(--color-secondary) !important;
+  }
+  .\!text-white {
+    color: var(--color-white) !important;
+  }
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+  .text-text {
+    color: var(--color-text);
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  @media (width >= 48rem) {
+    .md\:w-1\/2 {
+      width: calc(1 / 2 * 100%);
+    }
+    .md\:flex-row {
+      flex-direction: row;
+    }
   }
 }
 .st-section-s1 {
   width: 100%;
   padding-inline: calc(var(--spacing) * 4);
   padding-block: calc(var(--spacing) * 24);
+}
+.st-hero-text-lead {
+  font-size: 1.2rem;
+}
+.bg-primary {
+  color: var(--color-white);
+}
+.bg-secondary {
+  color: var(--color-black);
 }

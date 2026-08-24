@@ -30,7 +30,11 @@ get_header(); ?>
 		<?php
 		while ( have_posts() ) :
 			the_post();
+			
+			// HERO SECTION
+			get_template_part( 'template-parts/hero' );
 
+			// FLEXIBLE CONTENT PAGE BUILDER
 			if ( function_exists( 'have_rows' ) && have_rows( 'content_blocks' ) ) :
 
 				// Rename 'content_blocks' above and below to match your Flexible Content field's actual name if different.

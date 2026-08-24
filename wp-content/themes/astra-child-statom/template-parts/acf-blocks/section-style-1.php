@@ -5,7 +5,7 @@ include get_stylesheet_directory() . '/template-parts/acf-blocks/partials/genera
 ?>
 
 <section
-	class="st-section-s1 bg-gray-300 w-full"
+	class="st-section-s1 bg-gray-300"
 	style=""
 	>
 	<div class="<?= $gbo_container_width; ?>">
