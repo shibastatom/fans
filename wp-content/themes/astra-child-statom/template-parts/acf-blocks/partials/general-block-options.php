@@ -22,6 +22,8 @@ $get_general_block_options = get_sub_field(
 $gbo = $get_general_block_options;
 
 $gbo_heading = $gbo['heading'];
+$gbo_section_image = $gbo['section_image'];
+
 
 $get_gbo_container_width = $gbo['container_width'];
 $gbo_container_width = '';
