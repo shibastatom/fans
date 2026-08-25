@@ -23,6 +23,7 @@ $gbo = $get_general_block_options;
 
 $gbo_heading = $gbo['heading'];
 $gbo_section_image = $gbo['section_image'];
+$gbo_section_design = $gbo['section_design'];
 
 
 $get_gbo_container_width = $gbo['container_width'];

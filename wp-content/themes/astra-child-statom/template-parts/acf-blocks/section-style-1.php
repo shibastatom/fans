@@ -5,7 +5,7 @@ include get_stylesheet_directory() . '/template-parts/acf-blocks/partials/genera
 ?>
 
 <?php
-$design = 'design-1';
+$design = $gbo['section_design'];
 ?>
 
 <section
