@@ -9,8 +9,10 @@ $design = $gbo['section_design'];
 ?>
 
 <section
-	class="st-section-s3"
-	style=""
+	class="st-section-s3 <?php echo $gbo_background_image ? ' bg-cover bg-center bg-no-repeat' : ''; ?>"
+	<?php if ( $gbo_background_image ) : ?>
+	style="background-image: url('<?php echo esc_url( $gbo_background_image['url'] ); ?>');"
+	<?php endif; ?>
 	>
 	<?php if ($design == 'design-2') : ?>
 		<?php include __DIR__ . '/section-style-1/design-2.php'; ?>

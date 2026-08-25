@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- LEFT SIDE -->
 		<?php if ( $gbo_section_image ) : ?>
 		<div class="flex-1 flex justify-center">
-			<div class="border-secondary border-t-4 border-b-4">
+			<div class="border-secondary border-t-8 border-b-8">
 				<img
 					class="!h-full !w-full object-cover"
 					src="<?php echo esc_url( $gbo_section_image['url'] ); ?>"

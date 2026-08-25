@@ -6,6 +6,12 @@
 	--color-tertiary: #3d6655;
 	--color-text: #f6f2e8b8;
 	--container-site: 1200px;
+	--color-secondary-t20: #EBE6E0;
+}
+
+/* *** UNIVERSAL *** */
+h3 {
+	margin-bottom: 0.75rem;
 }
 
 .st-section-s1 {
@@ -66,6 +72,14 @@
 }
 .st-btn-secondary:hover::before {
 	transform: scaleX(1);
+}
+
+/* *** ACF REPEATER FIELDS BLOCK RELATED */
+.st-additional-overlap-container {
+	@apply relative;
+}
+.st-additional-overlap-container .st-additional-overlap-container-content {
+	@apply mt-[-6rem];
 }
 
 

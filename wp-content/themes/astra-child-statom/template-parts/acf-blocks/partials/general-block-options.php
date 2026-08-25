@@ -26,6 +26,7 @@ $gbo_section_image = $gbo['section_image'];
 $gbo_section_design = $gbo['section_design'];
 $gbo_additional_part = $gbo['additional_part'];
 $gbo_additional_part_overlap = $gbo['additional_part_overlap'];
+$gbo_background_image = $gbo['background_image'];
 // $gbo_additional_part_overlap = True;
 
 
