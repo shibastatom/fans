@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div>
 				<p class="uppercase !text-secondary">Who we are</p>
 				<?php if ( $gbo_heading ) : ?>
-					<h2 class="_heading uppercase !text-primary">DEVELOPING TOMORROW, <span class="text-secondary">ENRICHING TODAY</span></h2>
+					<h2 class="_heading uppercase !text-primary">D3 DEVELOPING TOMORROW, <span class="text-secondary">ENRICHING TODAY</span></h2>
 				<?php endif; ?>
 
 				<p class="st-hero-text-lead text-primary mt-4">Fancourt Property Group is a forward-thinking property developer with a proven track record of delivering high-quality residential and mixed-use developments. Our focus is on creating exceptional places that enhance lifestyles and stand the test of time.</p>

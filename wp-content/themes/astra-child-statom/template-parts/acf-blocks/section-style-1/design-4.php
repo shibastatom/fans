@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<div class="<?= $gbo_container_width; ?> flex flex-col md:flex-row items-stretch gap-8 py-12">
+<div class="<?= $gbo_container_width; ?> flex flex-col md:flex-row items-stretch gap-8">
 	<!-- LEFT SIDE -->
 	<?php if ( $gbo_section_image ) : ?>
 	<div class="flex-1 flex justify-center">
@@ -25,12 +25,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 	<?php endif; ?>
 	<!-- RIGHT SIDE -->
-	<div class="page-hero__content flex-1 flex flex-col justify-between">
-		<div class="text-center">
+	<div class="page-hero__content flex-1 flex flex-col justify-between py-12">
+		<div class="text-right">
 			<p class="uppercase !text-secondary">Who we are</p>
-			<h2 class="_heading uppercase !text-primary"><?= $gbo_heading; ?></h2>
+			<h2 class="_heading uppercase !text-primary">DEVELOPING TOMORROW, <span class="text-secondary">ENRICHING TODAY</span></h2>
+		</div>
+		<div class="text-left">
 			<p class="st-hero-text-lead text-primary">Fancourt Property Group develops outstanding residential and mixed-use communities across London; acquired, optimised and delivered without compromise.</p>
-			<button type="button" class="st-btn-primary">Learn more?</button>
+			<button type="button" class="st-btn-primary">Secondary</button>
 		</div>
 	</div>
 </div>
