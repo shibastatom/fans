@@ -60,11 +60,16 @@ if ( have_rows( 'feature_cards' ) ) {
 if ( empty( $feature_cards ) ) {
 	return;
 }
+
+// When enabled via the 'card_overlap' ACF True/False field, pull this block
+// up over its sibling above and narrow it in slightly on each side.
+// $overlap_classes = $gbo_additional_part_overlap ? 'relative z-10 mt-16 mx-16 p-6' : '';
+$overlap_classes = $gbo_additional_part_overlap ? 'relative z-10 mt-[-6rem] !mr-[2rem] p-6 pb-16' : '';
 ?>
-<div class="<?= $gbo_container_width; ?> py-12">
-	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+<div class="<?= $gbo_container_width; ?> pb-16">
+	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-4 ">
 		<?php foreach ( $feature_cards as $card ) : ?>
-			<div class="pr-6">
+			<div class="">
 				<?php if ( $card['icon'] ) : ?>
 					<i class="<?php echo esc_attr( $card['icon'] ); ?> text-5xl !text-secondary mb-4" aria-hidden="true"></i>
 				<?php endif; ?>
