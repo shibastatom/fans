@@ -28,11 +28,21 @@ get_header(); ?>
 		<?php astra_primary_content_top(); ?>
 
 		<?php
+		$get_general_page_options = get_field(
+			'general_page_content'
+		);
+		$gpo = $get_general_page_options;
+		$get_gpo_hero_design = $gpo['hero_design'];
+		$gpo_hero_design = ! empty( $get_gpo_hero_design ) ? sanitize_file_name( $get_gpo_hero_design ) : 'default';
+
 		while ( have_posts() ) :
 			the_post();
 			
 			// HERO SECTION
-			get_template_part( 'template-parts/hero' );
+			// get_template_part( 'template-parts/hero-designs/' . $gpo_hero_design . '.php' );
+			
+
+			get_template_part( 'template-parts/hero-designs/' . $gpo_hero_design );
 
 			// FLEXIBLE CONTENT PAGE BUILDER
 			if ( function_exists( 'have_rows' ) && have_rows( 'content_blocks' ) ) :
