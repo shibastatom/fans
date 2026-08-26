@@ -17,7 +17,7 @@ h3 {
 
 /* *** THEME STYLING *** */
 .st-eyebrow {
-	
+	@apply uppercase;
 }
 .st-theme-border-1 {
 	@apply border-secondary border-t-8 border-b-8;

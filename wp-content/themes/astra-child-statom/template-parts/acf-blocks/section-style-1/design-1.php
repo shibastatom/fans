@@ -35,8 +35,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 		<?php endif; ?>
 	</div>
-	<?php elseif ( (!empty($gbo_content_left_content)  || $gbo_heading_positioning == 'right-content') ) : ?>
-	<div class="flex-1 <?= $gbo_content_right_positioning; ?>">
+	<?php elseif ( (!empty($gbo_content_left_content)  || $gbo_heading_positioning == 'left-content') ) : ?>
+	<div class="flex-1 <?= $gbo_content_left_positioning; ?>">
 		<div>
 			<?php if ( $gbo_heading_positioning == 'left-content' ) : ?>
 				<?php include __DIR__ . '/../partials/heading-block.php'; ?>
