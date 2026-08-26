@@ -45,8 +45,7 @@ h3 {
 .bg-primary\/80 :is(h1, h2, h3, h4, h5, h6),
 .bg-primary\/70 :is(h1, h2, h3, h4, h5, h6),
 .bg-primary\/50 :is(h1, h2, h3, h4, h5, h6) {
-	/* @apply !text-white; */
-	color: lightcoral;
+	@apply !text-white;
 
 }
 
