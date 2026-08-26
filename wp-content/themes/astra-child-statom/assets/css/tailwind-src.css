@@ -109,6 +109,28 @@ h3 {
 	transform: scaleX(1);
 }
 
+.st-btn-outline {
+	position: relative;
+	isolation: isolate;
+	@apply inline-block rounded-none px-6 py-3 bg-transparent text-primary uppercase transition-colors duration-300 border-1 border-primary;
+}
+.st-btn-outline::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background-color: var(--color-primary);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.3s ease;
+}
+.st-btn-outline:hover {
+	@apply text-white;
+}
+.st-btn-outline:hover::before {
+	transform: scaleX(1);
+}
+
 /* *** ACF REPEATER FIELDS BLOCK RELATED */
 .st-additional-overlap-container {
 	@apply relative;

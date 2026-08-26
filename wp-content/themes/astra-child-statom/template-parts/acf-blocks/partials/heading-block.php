@@ -27,4 +27,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php if ( $gbo_subheading ) : ?>
 		<p class="st-hero-text-lead st-max-w-60perc"><?= $gbo_subheading; ?></p>
 	<?php endif; ?>
+
+	<?php if ( $gbo_button_1 ) : ?>
+		<a class="st-btn-secondary" href="<?= esc_url( $gbo_button_1['url'] ); ?>" target="<?= esc_attr( $gbo_button_1['target'] ); ?>"><?= esc_html( $gbo_button_1['title'] ); ?></a>
+	<?php endif; ?>
+	<?php if ( $gbo_button_2 ) : ?>
+		<a class="st-btn-outline" href="<?= esc_url( $gbo_button_2['url'] ); ?>" target="<?= esc_attr( $gbo_button_2['target'] ); ?>"><?= esc_html( $gbo_button_2['title'] ); ?></a>
+	<?php endif; ?>
 </div>

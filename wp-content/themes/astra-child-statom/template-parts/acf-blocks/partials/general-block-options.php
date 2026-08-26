@@ -9,7 +9,7 @@
  *   $block_slug = 'section-style-1';
  *   include get_stylesheet_directory() . '/template-parts/acf-blocks/partials/general-block-options.php';
  *
- * Provides: $heading, $subheading, $button, $image, $container_width.
+ * Provides: $heading, $subheading, $button, $gbo_button_1, $image, $container_width.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -23,6 +23,8 @@ $gbo = $get_general_block_options;
 
 $gbo_heading = $gbo['heading'];
 $gbo_subheading = $gbo['subheading'];
+$gbo_button_1 = $gbo['button_1'];
+$gbo_button_2 = $gbo['button_2'];
 $gbo_eyebrow = $gbo['eyebrow'];
 $gbo_heading_positioning = $gbo['heading_positioning'];
 $gbo_heading_text_alignment = $gbo['heading_text_alignment'];

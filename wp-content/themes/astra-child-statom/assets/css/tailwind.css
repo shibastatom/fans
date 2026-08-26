@@ -602,6 +602,41 @@ h3 {
 .st-btn-secondary:hover::before {
   transform: scaleX(1);
 }
+.st-btn-outline {
+  position: relative;
+  isolation: isolate;
+  display: inline-block;
+  border-radius: 0;
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-primary);
+  background-color: transparent;
+  padding-inline: calc(var(--spacing) * 6);
+  padding-block: calc(var(--spacing) * 3);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+}
+.st-btn-outline::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.st-btn-outline:hover {
+  color: var(--color-white);
+}
+.st-btn-outline:hover::before {
+  transform: scaleX(1);
+}
 .st-additional-overlap-container {
   position: relative;
 }
