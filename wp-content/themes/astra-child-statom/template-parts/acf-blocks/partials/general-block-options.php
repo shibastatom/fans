@@ -24,6 +24,14 @@ $gbo = $get_general_block_options;
 $gbo_heading = $gbo['heading'];
 $gbo_section_image = $gbo['section_image'];
 $gbo_section_design = $gbo['section_design'];
+$gbo_content_left = $gbo['content_left'];
+$gbo_content_left_content = $gbo_content_left['content'];
+$gbo_content_left_use_section_image = $gbo_content_left['use_section_image'];
+$gbo_content_right = $gbo['content_right'];
+$gbo_content_right_content = $gbo_content_right['content'];
+$gbo_content_right_use_section_image = $gbo_content_right['use_section_image'];
+
+// var_dump($gbo_content_left);
 $gbo_additional_part = $gbo['additional_part'];
 $gbo_additional_part_overlap = $gbo['additional_part_overlap'];
 $gbo_background_image = $gbo['background_image'];

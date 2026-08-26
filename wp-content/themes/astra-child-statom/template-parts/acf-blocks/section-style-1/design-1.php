@@ -15,22 +15,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <div class="<?= $gbo_container_width; ?> flex flex-col md:flex-row items-stretch gap-8 py-12">
 	<!-- LEFT SIDE -->
-	<?php if ( $gbo_section_image ) : ?>
-	<div class="flex-1 flex justify-center">
+	<?php if ( $gbo_content_left_use_section_image == true ) : ?>
+	<div class="flex-1 flex flex-col justify-between">
+		<?php if ( $gbo_section_image ) : ?>
 		<img
 			class="!h-full !w-full object-cover"
 			src="<?php echo esc_url( $gbo_section_image['url'] ); ?>"
 			alt="<?php echo esc_attr( $gbo_section_image['alt'] ); ?>"
 		>
+		<?php endif; ?>
+	</div>
+	<?php elseif ( !empty($gbo_content_left_content) ) : ?>
+	<div class="flex-1 flex flex-col justify-between">
+		<div><?= $gbo_content_left_content; ?></div>
 	</div>
 	<?php endif; ?>
+
 	<!-- RIGHT SIDE -->
-	<div class="page-hero__content flex-1 flex flex-col justify-between">
-		<div class="text-center">
-			<p class="uppercase !text-secondary">Who we are</p>
-			<h2 class="_heading uppercase !text-primary"><?= $gbo_heading; ?></h2>
-			<p class="st-hero-text-lead text-primary">Fancourt Property Group develops outstanding residential and mixed-use communities across London; acquired, optimised and delivered without compromise.</p>
-			<button type="button" class="st-btn-primary">Learn more?</button>
-		</div>
+	<?php if ( $gbo_content_right_use_section_image == true ) : ?>
+	<div class="flex-1 flex flex-col justify-between">
+		<?php if ( $gbo_section_image ) : ?>
+		<img
+			class="!h-full !w-full object-cover"
+			src="<?php echo esc_url( $gbo_section_image['url'] ); ?>"
+			alt="<?php echo esc_attr( $gbo_section_image['alt'] ); ?>"
+		>
+		<?php endif; ?>
 	</div>
+	<?php elseif ( !empty($gbo_content_right_content) ) : ?>
+	<div class="flex-1 flex flex-col justify-between">
+		<div><?= $gbo_content_right_content; ?></div>
+	</div>
+	<?php endif; ?>
 </div>
