@@ -71,6 +71,8 @@ if ( empty( $feature_cards ) ) {
 				<?php if ( $card['copy'] ) : ?>
 					<p class="mt-2 text-primary"><?php echo esc_html( $card['copy'] ); ?></p>
 				<?php endif; ?>
+
+				<button class="st-btn-primary">Test button</button>
 			</div>
 		<?php endforeach; ?>
 	</div>

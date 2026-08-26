@@ -7,25 +7,30 @@ include get_stylesheet_directory() . '/template-parts/acf-blocks/partials/genera
 <?php
 $design = $gbo['section_design'];
 ?>
-
 <section
-	class="st-section-s3 <?php echo $gbo_background_image ? ' bg-cover bg-center bg-no-repeat' : ''; ?>"
+	class="st-section-s3 relative<?php echo $gbo_background_image ? ' bg-cover bg-center bg-no-repeat' : ''; ?>"
 	<?php if ( $gbo_background_image ) : ?>
 	style="background-image: url('<?php echo esc_url( $gbo_background_image['url'] ); ?>');"
 	<?php endif; ?>
 	>
-	<?php if ($design == 'design-2') : ?>
-		<?php include __DIR__ . '/section-style-1/design-2.php'; ?>
-	<?php elseif ($design == 'design-3') : ?>
-		<?php include __DIR__ . '/section-style-1/design-3.php'; ?>
-	<?php else : ?>
-		<?php include __DIR__ . '/section-style-1/design-1.php'; ?>
-	<?php endif ?>
+	<?php if ( $gbo_background_image ) : ?>
+	<div class="absolute inset-0 <?= $gbo_background_overlay; ?>"></div>
+	<?php endif; ?>
 
-	<?php if ( $gbo_additional_part === 'feature-cards' ) : ?>
-		<?php include __DIR__ . '/partials/feature-cards.php'; ?>
-	<?php endif; ?>
-	<?php if ( $gbo_additional_part === 'service-cards' ) : ?>
-		<?php include __DIR__ . '/partials/service-cards.php'; ?>
-	<?php endif; ?>
+	<div class="relative z-10">
+		<?php if ($design == 'design-2') : ?>
+			<?php include __DIR__ . '/section-style-1/design-2.php'; ?>
+		<?php elseif ($design == 'design-3') : ?>
+			<?php include __DIR__ . '/section-style-1/design-3.php'; ?>
+		<?php else : ?>
+			<?php include __DIR__ . '/section-style-1/design-1.php'; ?>
+		<?php endif ?>
+
+		<?php if ( $gbo_additional_part === 'feature-cards' ) : ?>
+			<?php include __DIR__ . '/partials/feature-cards.php'; ?>
+		<?php endif; ?>
+		<?php if ( $gbo_additional_part === 'service-cards' ) : ?>
+			<?php include __DIR__ . '/partials/service-cards.php'; ?>
+		<?php endif; ?>
+	</div>
 </section>

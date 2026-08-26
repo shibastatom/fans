@@ -27,6 +27,37 @@ $gbo_section_design = $gbo['section_design'];
 $gbo_additional_part = $gbo['additional_part'];
 $gbo_additional_part_overlap = $gbo['additional_part_overlap'];
 $gbo_background_image = $gbo['background_image'];
+$get_gbo_background_overlay = $gbo['background_overlay_colours'];
+switch ( $get_gbo_background_overlay ) {
+	case 'bg-secondary/90':
+		$gbo_background_overlay = 'bg-secondary/90';
+		break;
+	case 'bg-secondary/80':
+		$gbo_background_overlay = 'bg-secondary/80';
+		break;
+	case 'bg-secondary/70':
+		$gbo_background_overlay = 'bg-secondary/70';
+		break;
+	case 'bg-secondary/50':
+		$gbo_background_overlay = 'bg-secondary/50';
+		break;
+	case 'bg-primary/90':
+		$gbo_background_overlay = 'bg-primary/90';
+		break;
+	case 'bg-primary/80':
+		$gbo_background_overlay = 'bg-primary/80';
+		break;
+	case 'bg-primary/70':
+		$gbo_background_overlay = 'bg-primary/70';
+		break;
+	case 'bg-primary/50':
+		$gbo_background_overlay = 'bg-primary/50';
+		break;
+	default:
+		$gbo_background_overlay = '';
+		break;
+}
+
 // $gbo_additional_part_overlap = True;
 
 

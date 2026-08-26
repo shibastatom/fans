@@ -79,7 +79,7 @@ h3 {
 	@apply relative;
 }
 .st-additional-overlap-container .st-additional-overlap-container-content {
-	@apply mt-[-6rem];
+	@apply mt-[-6rem] px-6;
 }
 
 
