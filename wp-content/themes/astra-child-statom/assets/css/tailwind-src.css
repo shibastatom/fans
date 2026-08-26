@@ -19,6 +19,9 @@ h3 {
 .st-theme-border-1 {
 	@apply border-secondary border-t-8 border-b-8;
 }
+.st-max-w-60perc {
+	max-width: calc(var(--container-site) * 0.66);
+}
 
 .st-section-s1 {
 	@apply py-24 w-full;

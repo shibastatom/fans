@@ -16,9 +16,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="<?= $gbo_container_width; ?> py-12 flex flex-col">
 	<div class="w-full">
 		<!-- FULL WIDTH -->
-		<div>
+		<div class="<?= $gbo_heading_text_alignment; ?>">
 			<h2 class=""><?= $gbo_heading; ?></h2>
-			<p>!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="st-hero-text-lead st-max-w-60perc"><?= $gbo_subheading; ?>??</p>
 		</div>
 	</div>
 
