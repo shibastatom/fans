@@ -22,6 +22,10 @@ h3 {
 .st-max-w-60perc {
 	max-width: calc(var(--container-site) * 0.66);
 }
+.text-center .st-max-w-60perc {
+	margin: auto;
+	text-align: center;
+}
 
 .st-section-s1 {
 	@apply py-24 w-full;

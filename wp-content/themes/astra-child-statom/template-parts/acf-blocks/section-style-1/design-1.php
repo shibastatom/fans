@@ -16,13 +16,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="<?= $gbo_container_width; ?> py-12 flex flex-col">
 	<div class="w-full">
 		<!-- FULL WIDTH -->
-		<div class="<?= $gbo_heading_text_alignment; ?>">
+		<?php if ( $gbo_heading_positioning == 'top-content' ) : ?>
+		<div class="<?= $gbo_heading_text_alignment; ?> mb-8">
 			<h2 class=""><?= $gbo_heading; ?></h2>
-			<p class="st-hero-text-lead st-max-w-60perc"><?= $gbo_subheading; ?>??</p>
+			<p class="st-hero-text-lead st-max-w-60perc"><?= $gbo_subheading; ?></p>
 		</div>
+		<?php endif; ?>
 	</div>
 
-	<div class="flex flex-col md:flex-row items-stretch gap-8 mt-8">
+	<div class="flex flex-col md:flex-row items-stretch gap-8">
 	<!-- LEFT SIDE -->
 	<?php if ( $gbo_content_left_use_section_image == true ) : ?>
 	<div class="flex-1 flex flex-col justify-between">
@@ -38,7 +40,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 	<?php elseif ( !empty($gbo_content_left_content) ) : ?>
 	<div class="flex-1 <?= $gbo_content_right_positioning; ?>">
-		<div><?= $gbo_content_left_content; ?></div>
+		<div>
+			<?php if ( $gbo_heading_positioning == 'left-content' ) : ?>
+			<h2 class=""><?= $gbo_heading; ?></h2>
+			<p class="st-hero-text-lead st-max-w-60perc"><?= $gbo_subheading; ?></p>
+			<?php endif; ?>
+			<?= $gbo_content_left_content; ?>
+		</div>
 	</div>
 	<?php endif; ?>
 
@@ -57,6 +65,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 	<?php elseif ( !empty($gbo_content_right_content) ) : ?>
 	<div class="flex-1 <?= $gbo_content_right_positioning; ?>">
+		<?php if ( $gbo_heading_positioning == 'right-content' ) : ?>
+		<h2 class=""><?= $gbo_heading; ?></h2>
+		<p class="st-hero-text-lead st-max-w-60perc"><?= $gbo_subheading; ?></p>
+		<?php endif; ?>
 		<div><?= $gbo_content_right_content; ?></div>
 	</div>
 	<?php endif; ?>

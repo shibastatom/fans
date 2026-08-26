@@ -23,6 +23,7 @@ $gbo = $get_general_block_options;
 
 $gbo_heading = $gbo['heading'];
 $gbo_subheading = $gbo['subheading'];
+$gbo_heading_positioning = $gbo['heading_positioning'];
 $gbo_heading_text_alignment = $gbo['heading_text_alignment'];
 $gbo_section_image = $gbo['section_image'];
 $gbo_section_design = $gbo['section_design'];
