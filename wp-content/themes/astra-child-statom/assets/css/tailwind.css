@@ -343,6 +343,9 @@
       background-color: color-mix(in oklab, var(--color-primary) 90%, transparent);
     }
   }
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
   .bg-secondary-t20 {
     background-color: var(--color-secondary-t20);
   }

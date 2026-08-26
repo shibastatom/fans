@@ -8,7 +8,7 @@ include get_stylesheet_directory() . '/template-parts/acf-blocks/partials/genera
 $design = $gbo['section_design'];
 ?>
 <section
-	class="st-section-s3 relative<?php echo $gbo_background_image ? ' bg-cover bg-center bg-no-repeat' : ''; ?>"
+	class="st-section-s3 relative <?php echo $gbo_background_image ? 'bg-cover bg-center bg-no-repeat' : $gbo_background_colour; ?>"
 	<?php if ( $gbo_background_image ) : ?>
 	style="background-image: url('<?php echo esc_url( $gbo_background_image['url'] ); ?>');"
 	<?php endif; ?>
