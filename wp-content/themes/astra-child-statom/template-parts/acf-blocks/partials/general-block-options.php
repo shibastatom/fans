@@ -25,6 +25,11 @@ $gbo_heading = $gbo['heading'];
 $gbo_subheading = $gbo['subheading'];
 $gbo_heading_positioning = $gbo['heading_positioning'];
 $gbo_heading_text_alignment = $gbo['heading_text_alignment'];
+switch ( $gbo_heading_text_alignment ) {
+	case 'text-center':
+		$gbo_heading_text_alignment = 'text-center';
+		break;
+}
 $gbo_section_image = $gbo['section_image'];
 $gbo_section_design = $gbo['section_design'];
 $gbo_content_left = $gbo['content_left'];

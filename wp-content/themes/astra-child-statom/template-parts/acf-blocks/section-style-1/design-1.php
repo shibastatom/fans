@@ -17,8 +17,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="w-full">
 		<!-- FULL WIDTH -->
 		<?php if ( $gbo_heading_positioning == 'top-content' ) : ?>
-		<div class="<?= $gbo_heading_text_alignment; ?> mb-8">
-			<h2 class=""><?= $gbo_heading; ?></h2>
+		<div 
+		class="<?= $gbo_heading_text_alignment; ?> mb-8"
+		>
+			<h2 class="<?= $gbo_heading_text_alignment; ?>"><?= $gbo_heading; ?></h2>
 			<p class="st-hero-text-lead st-max-w-60perc"><?= $gbo_subheading; ?></p>
 		</div>
 		<?php endif; ?>

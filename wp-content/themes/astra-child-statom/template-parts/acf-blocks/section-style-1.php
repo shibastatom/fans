@@ -17,7 +17,7 @@ $design = $gbo['section_design'];
 	<div class="absolute inset-0 <?= $gbo_background_overlay; ?>"></div>
 	<?php endif; ?>
 
-	<div class="relative z-10">
+	<div class="relative z-10 <?= $gbo_background_overlay; ?>">
 		<?php if ($design == 'design-2') : ?>
 			<?php include __DIR__ . '/section-style-1/design-2.php'; ?>
 		<?php elseif ($design == 'design-3') : ?>

@@ -35,12 +35,32 @@ h3 {
 	font-size: 1.2rem;
 }
 
-.bg-primary {
-	@apply text-white;
+.bg-primary,
+.bg-primary\/90,
+.bg-primary\/80,
+.bg-primary\/70,
+.bg-primary\/50,
+.bg-primary :is(h1, h2, h3, h4, h5, h6),
+.bg-primary\/90 :is(h1, h2, h3, h4, h5, h6),
+.bg-primary\/80 :is(h1, h2, h3, h4, h5, h6),
+.bg-primary\/70 :is(h1, h2, h3, h4, h5, h6),
+.bg-primary\/50 :is(h1, h2, h3, h4, h5, h6) {
+	/* @apply !text-white; */
+	color: lightcoral;
+
 }
 
-.bg-secondary {
-	@apply text-black;
+.bg-secondary,
+.bg-secondary\/90,
+.bg-secondary\/80,
+.bg-secondary\/70,
+.bg-secondary\/50,
+.bg-secondary :is(h1, h2, h3, h4, h5, h6),
+.bg-secondary\/90 :is(h1, h2, h3, h4, h5, h6),
+.bg-secondary\/80 :is(h1, h2, h3, h4, h5, h6),
+.bg-secondary\/70 :is(h1, h2, h3, h4, h5, h6),
+.bg-secondary\/50 :is(h1, h2, h3, h4, h5, h6) {
+	@apply !text-black;
 }
 
 .st-btn-primary {

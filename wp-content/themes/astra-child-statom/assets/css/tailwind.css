@@ -221,9 +221,6 @@
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
-  .mt-8 {
-    margin-top: calc(var(--spacing) * 8);
-  }
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
   }
@@ -526,11 +523,11 @@ h3 {
 .st-hero-text-lead {
   font-size: 1.2rem;
 }
-.bg-primary {
-  color: var(--color-white);
+.bg-primary, .bg-primary\/90, .bg-primary\/80, .bg-primary\/70, .bg-primary\/50, .bg-primary :is(h1, h2, h3, h4, h5, h6), .bg-primary\/90 :is(h1, h2, h3, h4, h5, h6), .bg-primary\/80 :is(h1, h2, h3, h4, h5, h6), .bg-primary\/70 :is(h1, h2, h3, h4, h5, h6), .bg-primary\/50 :is(h1, h2, h3, h4, h5, h6) {
+  color: lightcoral;
 }
-.bg-secondary {
-  color: var(--color-black);
+.bg-secondary, .bg-secondary\/90, .bg-secondary\/80, .bg-secondary\/70, .bg-secondary\/50, .bg-secondary :is(h1, h2, h3, h4, h5, h6), .bg-secondary\/90 :is(h1, h2, h3, h4, h5, h6), .bg-secondary\/80 :is(h1, h2, h3, h4, h5, h6), .bg-secondary\/70 :is(h1, h2, h3, h4, h5, h6), .bg-secondary\/50 :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--color-black) !important;
 }
 .st-btn-primary {
   position: relative;
