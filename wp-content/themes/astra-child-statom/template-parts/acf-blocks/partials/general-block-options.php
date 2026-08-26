@@ -23,6 +23,7 @@ $gbo = $get_general_block_options;
 
 $gbo_heading = $gbo['heading'];
 $gbo_subheading = $gbo['subheading'];
+$gbo_eyebrow = $gbo['eyebrow'];
 $gbo_heading_positioning = $gbo['heading_positioning'];
 $gbo_heading_text_alignment = $gbo['heading_text_alignment'];
 switch ( $gbo_heading_text_alignment ) {
@@ -62,7 +63,6 @@ $gbo_additional_part = $gbo['additional_part'];
 $gbo_additional_part_overlap = $gbo['additional_part_overlap'];
 $gbo_background_image = $gbo['background_image'];
 $get_gbo_background_overlay = $gbo['background_overlay_colours'];
-var_dump($get_gbo_background_overlay);
 switch ( $get_gbo_background_overlay ) {
 	case 'bg-secondary/90':
 		$gbo_background_overlay = 'bg-secondary/90';

@@ -16,6 +16,9 @@ h3 {
 
 
 /* *** THEME STYLING *** */
+.st-eyebrow {
+	
+}
 .st-theme-border-1 {
 	@apply border-secondary border-t-8 border-b-8;
 }

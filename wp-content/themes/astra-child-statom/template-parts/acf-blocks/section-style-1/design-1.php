@@ -17,12 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="w-full">
 		<!-- FULL WIDTH -->
 		<?php if ( $gbo_heading_positioning == 'top-content' ) : ?>
-		<div 
-		class="<?= $gbo_heading_text_alignment; ?> mb-8"
-		>
-			<h2 class="<?= $gbo_heading_text_alignment; ?>"><?= $gbo_heading; ?></h2>
-			<p class="st-hero-text-lead st-max-w-60perc"><?= $gbo_subheading; ?></p>
-		</div>
+			<?php include __DIR__ . '/../partials/heading-block.php'; ?>
 		<?php endif; ?>
 	</div>
 
@@ -40,12 +35,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 		<?php endif; ?>
 	</div>
-	<?php elseif ( !empty($gbo_content_left_content) ) : ?>
+	<?php elseif ( (!empty($gbo_content_left_content)  || $gbo_heading_positioning == 'right-content') ) : ?>
 	<div class="flex-1 <?= $gbo_content_right_positioning; ?>">
 		<div>
 			<?php if ( $gbo_heading_positioning == 'left-content' ) : ?>
-			<h2 class=""><?= $gbo_heading; ?></h2>
-			<p class="st-hero-text-lead st-max-w-60perc"><?= $gbo_subheading; ?></p>
+				<?php include __DIR__ . '/../partials/heading-block.php'; ?>
 			<?php endif; ?>
 			<?= $gbo_content_left_content; ?>
 		</div>
@@ -65,13 +59,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 		<?php endif; ?>
 	</div>
-	<?php elseif ( !empty($gbo_content_right_content) ) : ?>
+	<?php elseif ( (!empty($gbo_content_right_content)) || $gbo_heading_positioning == 'right-content' ) : ?>
 	<div class="flex-1 <?= $gbo_content_right_positioning; ?>">
-		<?php if ( $gbo_heading_positioning == 'right-content' ) : ?>
-		<h2 class=""><?= $gbo_heading; ?></h2>
-		<p class="st-hero-text-lead st-max-w-60perc"><?= $gbo_subheading; ?></p>
-		<?php endif; ?>
-		<div><?= $gbo_content_right_content; ?></div>
+		<div>
+			<?php if ( $gbo_heading_positioning == 'right-content' ) : ?>
+				<?php include __DIR__ . '/../partials/heading-block.php'; ?>
+			<?php endif; ?>
+			<?= $gbo_content_right_content; ?>
+		</div>
 	</div>
 	<?php endif; ?>
 	</div>
