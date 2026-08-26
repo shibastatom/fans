@@ -27,9 +27,27 @@ $gbo_section_design = $gbo['section_design'];
 $gbo_content_left = $gbo['content_left'];
 $gbo_content_left_content = $gbo_content_left['content'];
 $gbo_content_left_use_section_image = $gbo_content_left['use_section_image'];
+$gbo_content_left_positioning = $gbo_content_left['positioning'];
+switch ( $gbo_content_left_positioning ) {
+	case 'v-middle':
+		$gbo_content_left_positioning = 'flex items-center';
+		break;
+	default:
+		$gbo_content_left_positioning = $gbo_content_left_positioning;
+		break;
+}
 $gbo_content_right = $gbo['content_right'];
 $gbo_content_right_content = $gbo_content_right['content'];
 $gbo_content_right_use_section_image = $gbo_content_right['use_section_image'];
+$gbo_content_right_positioning = $gbo_content_right['positioning'];
+switch ( $gbo_content_right_positioning ) {
+	case 'v-middle':
+		$gbo_content_right_positioning = 'flex items-center';
+		break;
+	default:
+		$gbo_content_right_positioning = $gbo_content_right_positioning;
+		break;
+}
 
 // var_dump($gbo_content_left);
 $gbo_additional_part = $gbo['additional_part'];
