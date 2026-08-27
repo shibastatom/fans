@@ -24,7 +24,8 @@
     --color-secondary: #967d54;
     --color-text: #f6f2e8b8;
     --container-site: 1200px;
-    --color-secondary-t20: #EBE6E0;
+    --color-secondary-t10: #967D541A;
+    --color-secondary-t20: #967D5433;
   }
 }
 @layer base {
@@ -284,9 +285,6 @@
   .flex-2 {
     flex: 2;
   }
-  .flex-\[2_2_0\%\] {
-    flex: 2 2 0%;
-  }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -331,6 +329,9 @@
   .border-secondary {
     border-color: var(--color-secondary);
   }
+  .\!bg-secondary-t20 {
+    background-color: var(--color-secondary-t20) !important;
+  }
   .bg-black\/75 {
     background-color: color-mix(in srgb, #000 75%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -366,6 +367,9 @@
   }
   .bg-secondary {
     background-color: var(--color-secondary);
+  }
+  .bg-secondary-t10 {
+    background-color: var(--color-secondary-t10);
   }
   .bg-secondary-t20 {
     background-color: var(--color-secondary-t20);
@@ -481,19 +485,12 @@
   .uppercase {
     text-transform: uppercase;
   }
-  .opacity-70 {
-    opacity: 70%;
-  }
   .opacity-70\! {
     opacity: 70% !important;
   }
   .shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .grayscale {
-    --tw-grayscale: grayscale(100%);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .grayscale\! {
     --tw-grayscale: grayscale(100%) !important;
@@ -505,15 +502,8 @@
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
   @media (hover: hover) {
-    .hover\:opacity-100:hover {
-      opacity: 100%;
-    }
     .hover\:opacity-100\!:hover {
       opacity: 100% !important;
-    }
-    .hover\:grayscale-0:hover {
-      --tw-grayscale: grayscale(0%);
-      filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
     }
     .hover\:grayscale-0\!:hover {
       --tw-grayscale: grayscale(0%) !important;

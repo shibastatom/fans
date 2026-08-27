@@ -59,7 +59,7 @@ if ( empty( $feature_cards ) ) {
 <div class="<?= $gbo_container_width; ?> pb-16">
 	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 		<?php foreach ( $feature_cards as $card ) : ?>
-			<div class="px-6 py-8 border-secondary border-t-8 bg-secondary-t20 shadow-lg">
+			<div class="px-6 py-8 border-secondary border-t-8 bg-white shadow-lg">
 				<?php if ( $card['icon'] ) : ?>
 					<i class="<?php echo esc_attr( $card['icon'] ); ?> text-5xl !text-secondary mb-4" aria-hidden="true"></i>
 				<?php endif; ?>

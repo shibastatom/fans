@@ -92,6 +92,12 @@ switch ( $get_gbo_background_colour ) {
 	case 'bg-white':
 		$gbo_background_colour = 'bg-white';
 		break;
+	case 'bg-secondary-t10':
+		$gbo_background_colour = 'bg-secondary-t10';
+		break;
+	case 'bg-secondary-t20':
+		$gbo_background_colour = 'bg-secondary-t20';
+		break;
 	default:
 		$gbo_background_colour = '';
 		break;
