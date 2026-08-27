@@ -34,6 +34,12 @@ switch ( $gbo_heading_text_alignment ) {
 		break;
 }
 $gbo_section_image = $gbo['section_image'];
+$gbo_image_animation = $gbo['image_animation'];
+switch ( $gbo_image_animation ) {
+	case 'animation-1':
+		$gbo_image_animation = 'animation-1';
+		break;
+}
 $gbo_section_design = $gbo['section_design'];
 $gbo_content_left = $gbo['content_left'];
 $gbo_content_left_content = $gbo_content_left['content'];
