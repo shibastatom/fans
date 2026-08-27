@@ -165,6 +165,17 @@ h3 {
 .st-swiper-carousel .swiper-button-next:hover {
 	@apply bg-primary text-white;
 }
+/* *** SCROLL REVEAL RELATED *** */
+.st-reveal-item {
+	transform: translateY(100%);
+	opacity: 0;
+	transition: transform 1.5s ease, opacity 1.2s ease;
+}
+.st-reveal.is-visible .st-reveal-item {
+	transform: translateY(0);
+	opacity: 1;
+}
+
 .st-swiper-carousel .swiper-pagination {
 	position: static;
 	margin-top: 1.5rem;

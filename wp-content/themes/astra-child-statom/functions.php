@@ -50,5 +50,12 @@ function astra_child_enqueue_scripts() {
         filemtime( get_stylesheet_directory() . '/assets/js/stat-counter.js' ),
         true
     );
+    wp_enqueue_script(
+        'astra-child-scroll-reveal',
+        get_stylesheet_directory_uri() . '/assets/js/scroll-reveal.js',
+        array(),
+        filemtime( get_stylesheet_directory() . '/assets/js/scroll-reveal.js' ),
+        true
+    );
 }
 add_action( 'wp_enqueue_scripts', 'astra_child_enqueue_scripts' );
