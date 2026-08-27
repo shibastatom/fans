@@ -17,7 +17,17 @@ h3 {
 
 /* *** THEME STYLING *** */
 .st-eyebrow {
-	@apply uppercase;
+	@apply uppercase !text-secondary;
+}
+.bg-primary .st-eyebrow {
+	@apply !text-secondary;
+	/* span!!! */
+}
+.bg-secondary .st-eyebrow {
+	@apply !text-primary;
+}
+.bg-white .st-eyebrow {
+	@apply !text-secondary;
 }
 .st-theme-border-1 {
 	@apply border-secondary border-t-8 border-b-8;
@@ -137,6 +147,24 @@ h3 {
 }
 .st-additional-overlap-container .st-additional-overlap-container-content {
 	@apply mt-[-6rem] px-6;
+}
+
+/* *** SWIPER CAROUSEL RELATED */
+.st-swiper-carousel {
+	--swiper-navigation-size: 18px;
+}
+.st-swiper-carousel .swiper-button-prev,
+.st-swiper-carousel .swiper-button-next {
+	@apply size-12 bg-white text-primary border-1 border-primary rounded-none transition-colors duration-300;
+	margin-top: -1.5rem;
+}
+.st-swiper-carousel .swiper-button-prev:hover,
+.st-swiper-carousel .swiper-button-next:hover {
+	@apply bg-primary text-white;
+}
+.st-swiper-carousel .swiper-pagination {
+	position: static;
+	margin-top: 1.5rem;
 }
 
 

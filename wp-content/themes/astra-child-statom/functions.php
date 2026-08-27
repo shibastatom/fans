@@ -19,5 +19,29 @@ function astra_child_enqueue_styles() {
         array( 'astra-child-style' ),
         filemtime( get_stylesheet_directory() . '/assets/css/tailwind.css' )
     );
+    wp_enqueue_style(
+        'swiper',
+        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
+        array(),
+        '11'
+    );
 }
 add_action( 'wp_enqueue_scripts', 'astra_child_enqueue_styles' );
+
+function astra_child_enqueue_scripts() {
+    wp_enqueue_script(
+        'swiper',
+        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+        array(),
+        '11',
+        true
+    );
+    wp_enqueue_script(
+        'astra-child-swiper-init',
+        get_stylesheet_directory_uri() . '/assets/js/swiper-init.js',
+        array( 'swiper' ),
+        filemtime( get_stylesheet_directory() . '/assets/js/swiper-init.js' ),
+        true
+    );
+}
+add_action( 'wp_enqueue_scripts', 'astra_child_enqueue_scripts' );
