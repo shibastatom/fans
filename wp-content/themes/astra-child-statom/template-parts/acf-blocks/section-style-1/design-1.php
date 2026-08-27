@@ -26,13 +26,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php if ( $gbo_content_left_use_section_image == true ) : ?>
 	<div class="<?= $gbo_content_left_flex; ?> flex flex-col justify-between">
 		<?php if ( $gbo_section_image ) : ?>
-		<div class="st-theme-border-1 bg-primary overflow-hidden st-reveal">
-			<img
-				class="!h-full !w-full object-cover st-reveal-item"
-				src="<?php echo esc_url( $gbo_section_image['url'] ); ?>"
-				alt="<?php echo esc_attr( $gbo_section_image['alt'] ); ?>"
-			>
-		</div>
+			<?php if ( $gbo_image_animation == 'animation-1' ) : ?>
+			<div class="st-theme-border-1 bg-secondary overflow-hidden st-reveal">
+				<img
+					class="!h-full !w-full object-cover st-reveal-item"
+					src="<?php echo esc_url( $gbo_section_image['url'] ); ?>"
+					alt="<?php echo esc_attr( $gbo_section_image['alt'] ); ?>"
+				>
+			</div>
+			<?php else : ?>
+			<div class="st-theme-border-1 bg-secondary overflow-hidden">
+				<img
+					class="!h-full !w-full object-cover"
+					src="<?php echo esc_url( $gbo_section_image['url'] ); ?>"
+					alt="<?php echo esc_attr( $gbo_section_image['alt'] ); ?>"
+				>
+			</div>
+			<?php endif; ?>
 		<?php endif; ?>
 	</div>
 	<?php elseif ( (!empty($gbo_content_left_content)  || $gbo_heading_positioning == 'left-content') ) : ?>

@@ -76,6 +76,14 @@ switch ( $gbo_content_split ) {
 		$gbo_content_left_flex = 'flex-2';
 		$gbo_content_right_flex = 'flex-1';
 		break;
+	case '2-3':
+		$gbo_content_left_flex = 'flex-2';
+		$gbo_content_right_flex = 'flex-3';
+		break;
+	case '3-2':
+		$gbo_content_left_flex = 'flex-3';
+		$gbo_content_right_flex = 'flex-2';
+		break;
 	default:
 		$gbo_content_left_flex = 'flex-1';
 		$gbo_content_right_flex = 'flex-1';
