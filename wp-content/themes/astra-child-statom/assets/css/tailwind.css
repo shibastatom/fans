@@ -245,6 +245,9 @@
   .aspect-\[4\/3\] {
     aspect-ratio: 4/3;
   }
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
   .\!h-full {
     height: 100% !important;
   }
@@ -541,6 +544,9 @@ h3 {
 }
 .st-hero-text-lead {
   font-size: 1.2rem;
+}
+.st-text-promo {
+  font-size: 3rem;
 }
 .bg-primary, .bg-primary\/90, .bg-primary\/80, .bg-primary\/70, .bg-primary\/50, .bg-primary :is(h1, h2, h3, h4, h5, h6), .bg-primary\/90 :is(h1, h2, h3, h4, h5, h6), .bg-primary\/80 :is(h1, h2, h3, h4, h5, h6), .bg-primary\/70 :is(h1, h2, h3, h4, h5, h6), .bg-primary\/50 :is(h1, h2, h3, h4, h5, h6) {
   color: var(--color-white) !important;

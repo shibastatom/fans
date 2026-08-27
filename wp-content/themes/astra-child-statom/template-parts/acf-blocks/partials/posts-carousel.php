@@ -67,7 +67,8 @@ $posts_carousel_options = array(
 
 						<div class="p-6 bg-white flex flex-col flex-1">
 							<h3 class="uppercase !text-primary font-bold"><?php the_title(); ?></h3>
-							<p class="mt-2 text-primary flex-1"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 20 ) ); ?></p>
+							<p class="text-secondary uppercase">Location</p>
+							<p class="text-primary flex-1"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 20 ) ); ?></p>
 							<a href="<?php the_permalink(); ?>" class="st-btn-secondary mt-4 self-start">Read more</a>
 						</div>
 					</div>
