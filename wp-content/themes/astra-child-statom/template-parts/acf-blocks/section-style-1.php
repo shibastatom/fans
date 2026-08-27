@@ -41,5 +41,8 @@ $design = $gbo['section_design'];
 		<?php if ( $gbo_additional_part === 'logo-carousel' ) : ?>
 			<?php include __DIR__ . '/partials/logo-carousel.php'; ?>
 		<?php endif; ?>
+		<?php if ( $gbo_additional_part === 'cta' ) : ?>
+			<?php include __DIR__ . '/partials/cta.php'; ?>
+		<?php endif; ?>
 	</div>
 </section>

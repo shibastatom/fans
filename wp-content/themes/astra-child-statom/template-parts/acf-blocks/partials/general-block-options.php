@@ -21,6 +21,7 @@ $get_general_block_options = get_sub_field(
 );
 $gbo = $get_general_block_options;
 
+$gbo_hide_main_content = $gbo['hide_main_content'];
 $gbo_heading = $gbo['heading'];
 $gbo_subheading = $gbo['subheading'];
 $gbo_button_1 = $gbo['button_1'];
