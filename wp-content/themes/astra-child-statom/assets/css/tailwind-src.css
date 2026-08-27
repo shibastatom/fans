@@ -17,17 +17,16 @@ h3 {
 
 /* *** THEME STYLING *** */
 .st-eyebrow {
-	@apply uppercase !text-secondary;
+	@apply uppercase text-secondary;
 }
 .bg-primary .st-eyebrow {
-	@apply !text-secondary;
-	/* span!!! */
+	@apply text-secondary;
 }
 .bg-secondary .st-eyebrow {
-	@apply !text-primary;
+	@apply text-primary;
 }
 .bg-white .st-eyebrow {
-	@apply !text-secondary;
+	@apply text-secondary;
 }
 .st-theme-border-1 {
 	@apply border-secondary border-t-8 border-b-8;
