@@ -60,6 +60,22 @@ switch ( $gbo_content_right_positioning ) {
 		break;
 }
 
+$gbo_content_split = $gbo['content_split'];
+switch ( $gbo_content_split ) {
+	case '1-2':
+		$gbo_content_left_flex = 'flex-1';
+		$gbo_content_right_flex = 'flex-2';
+		break;
+	case '2-1':
+		$gbo_content_left_flex = 'flex-2';
+		$gbo_content_right_flex = 'flex-1';
+		break;
+	default:
+		$gbo_content_left_flex = 'flex-1';
+		$gbo_content_right_flex = 'flex-1';
+		break;
+}
+
 // var_dump($gbo_content_left);
 $gbo_additional_part = $gbo['additional_part'];
 $gbo_additional_part_overlap = $gbo['additional_part_overlap'];

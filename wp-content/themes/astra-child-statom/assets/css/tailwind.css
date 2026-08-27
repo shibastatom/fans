@@ -281,6 +281,12 @@
   .flex-1 {
     flex: 1;
   }
+  .flex-2 {
+    flex: 2;
+  }
+  .flex-\[2_2_0\%\] {
+    flex: 2 2 0%;
+  }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
