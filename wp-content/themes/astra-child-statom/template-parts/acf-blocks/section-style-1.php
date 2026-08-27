@@ -38,5 +38,8 @@ $design = $gbo['section_design'];
 		<?php if ( $gbo_additional_part === 'stat-cards' ) : ?>
 			<?php include __DIR__ . '/partials/stat-cards.php'; ?>
 		<?php endif; ?>
+		<?php if ( $gbo_additional_part === 'logo-carousel' ) : ?>
+			<?php include __DIR__ . '/partials/logo-carousel.php'; ?>
+		<?php endif; ?>
 	</div>
 </section>
