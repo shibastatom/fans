@@ -69,8 +69,11 @@ if ( empty( $stat_cards ) ) {
 ?>
 <div class="<?= $gbo_container_width; ?> pb-16">
 	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 w-full">
-		<?php foreach ( $stat_cards as $card ) : ?>
-			<div class="px-6 py-8 border-secondary border-t-8 bg-primary shadow-lg text-center aspect-square flex flex-col justify-center">
+		<?php foreach ( $stat_cards as $card_index => $card ) : ?>
+			<div
+				class="px-6 py-8 border-secondary border-t-8 bg-primary shadow-lg text-center aspect-square flex flex-col justify-center st-reveal-scale"
+				style="transition-delay: <?= $card_index * 0.1; ?>s;"
+			>
 				<div>
 					<h3 class="st-text-promo !text-secondary">
 						<span class="st-stat-counter" data-target="<?php echo esc_attr( $card['number'] ); ?>">0</span><?php echo esc_html( $card['suffix'] ); ?>

@@ -69,8 +69,11 @@ $overlap_classes = $gbo_additional_part_overlap == true ? 'st-additional-overlap
 ?>
 <div class="<?= $overlap_classes; ?> <?= $gbo_container_width; ?> pb-16">
 	<div class="st-additional-overlap-container-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-		<?php foreach ( $feature_cards as $card ) : ?>
-			<div class="px-6 py-8 border-secondary border-t-8 bg-secondary-t20 shadow-lg">
+		<?php foreach ( $feature_cards as $card_index => $card ) : ?>
+			<div
+				class="px-6 py-8 border-secondary border-t-8 bg-secondary-t20 shadow-lg st-reveal-scale"
+				style="transition-delay: <?= $card_index * 0.1; ?>s;"
+			>
 				<?php if ( $card['icon'] ) : ?>
 					<i class="<?php echo esc_attr( $card['icon'] ); ?> text-5xl !text-secondary mb-4" aria-hidden="true"></i>
 				<?php endif; ?>
