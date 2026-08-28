@@ -30,21 +30,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 $scroll_flick_cards = array(
 	array(
 		'icon'  => 'fa-solid fa-building',
-		'title' => 'Lorem Ipsum One',
+		'title' => 'Quality',
 		'copy'  => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-		'image' => 'https://chocolate-zebra-256559.hostingersite.com/wp-content/uploads/2026/08/warm-cloud-bg-scaled.jpg',
+		'image' => 'https://chocolate-zebra-256559.hostingersite.com/wp-content/uploads/2026/08/geometric-facades-residential-building.png',
 	),
 	array(
 		'icon'  => 'fa-solid fa-leaf',
-		'title' => 'Lorem Ipsum Two',
+		'title' => 'Sustainbaility',
 		'copy'  => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-		'image' => 'https://chocolate-zebra-256559.hostingersite.com/wp-content/uploads/2026/08/white-cloud-scaled.jpeg',
+		'image' => 'https://chocolate-zebra-256559.hostingersite.com/wp-content/uploads/2026/08/exterior-view-contemporary-tall-apartment-building-premises.png',
 	),
 	array(
 		'icon'  => 'fa-solid fa-city',
-		'title' => 'Lorem Ipsum Three',
+		'title' => 'Safety',
 		'copy'  => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-		'image' => 'https://chocolate-zebra-256559.hostingersite.com/wp-content/uploads/2026/08/warm-cloud-bg-scaled.jpg',
+		'image' => 'https://chocolate-zebra-256559.hostingersite.com/wp-content/uploads/2026/08/modern-residential-building.png',
 	),
 );
 ?>
@@ -67,18 +67,19 @@ $scroll_flick_cards = array(
 			<div class="flex-3 st-scroll-flick-stack w-full">
 				<?php foreach ( $scroll_flick_cards as $card_index => $card ) : ?>
 					<div class="st-scroll-card bg-secondary-t20 border-secondary border-t-8 shadow-lg<?= 0 === $card_index ? ' is-active' : ''; ?>">
-						<div class="p-8">
+						<div class="pt-12 px-12">
 							<?php if ( $card['icon'] ) : ?>
 								<i class="<?php echo esc_attr( $card['icon'] ); ?> text-4xl !text-secondary mb-4" aria-hidden="true"></i>
 							<?php endif; ?>
 
-							<h3 class="uppercase font-bold"><?php echo esc_html( $card['title'] ); ?> <span class="text-secondary">VALUE</span></h3>
-							<p class="mt-2"><?php echo esc_html( $card['copy'] ); ?></p>
+							<h3 class="uppercase font-bold st-text-promo"><?php echo esc_html( $card['title'] ); ?> <span class="text-secondary">VALUE</span></h3>
+							<p class="mt-2 !mb-0"><?php echo esc_html( $card['copy'] ); ?></p>
+							<a class="st-btn-secondary mt-4">Learn more</a>
 						</div>
 
 						<?php if ( $card['image'] ) : ?>
-							<div class="aspect-[16/9] w-full overflow-hidden">
-								<img class="block !w-full object-cover" src="<?= $card['image']; ?>" alt="">
+							<div class="aspect-[16/9] w-full overflow-hidden st-reveal">
+								<img class="block !w-full object-cover st-reveal-item" src="<?= $card['image']; ?>" alt="">
 							</div>
 						<?php endif; ?>
 					</div>

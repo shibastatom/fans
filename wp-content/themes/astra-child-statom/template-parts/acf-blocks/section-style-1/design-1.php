@@ -29,7 +29,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="<?= $gbo_content_left_flex; ?> flex flex-col justify-between">
 		<?php if ( $gbo_section_image ) : ?>
 			<?php if ( $gbo_image_animation == 'animation-1' ) : ?>
-			<div class="st-theme-border-1 bg-secondary overflow-hidden st-reveal">
+			<div 
+			class="st-theme-border-1 bg-secondary overflow-hidden st-reveal"
+			style="background-image: url('https://chocolate-zebra-256559.hostingersite.com/wp-content/uploads/2026/08/fancourt-pattern-large-scaled.jpg');"
+			>
 				<img
 					class="!h-full !w-full object-cover st-reveal-item"
 					src="<?php echo esc_url( $gbo_section_image['url'] ); ?>"
@@ -63,7 +66,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="<?= $gbo_content_right_flex; ?> flex flex-col justify-between">
 		<?php if ( $gbo_section_image ) : ?>
 			<?php if ( $gbo_image_animation == 'animation-1' ) : ?>
-			<div class="st-theme-border-1 bg-secondary overflow-hidden st-reveal">
+			<div 
+			class="st-theme-border-1 bg-secondary overflow-hidden st-reveal"
+			style="background-image: url('https://chocolate-zebra-256559.hostingersite.com/wp-content/uploads/2026/08/fancourt-pattern-large-scaled.jpg');"
+			>
 				<img
 					class="!h-full !w-full object-cover st-reveal-item"
 					src="<?php echo esc_url( $gbo_section_image['url'] ); ?>"

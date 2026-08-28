@@ -23,17 +23,17 @@ $partial_padding = $gbo_hide_main_content ? 'pb-16 pt-16' : 'pb-16';
 
 <div class="<?= $gbo_container_width; ?> <?= $partial_padding ; ?>">
 	<div
-	class="bg-primary st-bg-fade-primary flex shadow-lg"
+	class="bg-primary st-bg-fade-primary! flex shadow-lg"
 	>
-		<div class="flex-3 py-8 px-8">
-			<h2 class="uppercase !text-secondary">Lorem ipsum dolor sit amet consectetur adipiscing elit</h2>
-			<p class="st-hero-text-lead st-max-w-60perc text-white mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			<a href="#" class="st-btn-secondary">Get in touch</a>
+		<div class="flex-3 py-16 px-8">
+			<h2 class="uppercase !text-white">Let's Discuss Your <span class="text-secondary">Next Project</span></h2>
+			<p class="st-hero-text-lead st-max-w-60perc text-white mt-4">Every great project starts with a conversation. Tell us about your goals, challenges, or ideas, and we’ll help you find the right solution.</p>
+			<a href="#" class="st-btn-primary">Get in touch</a>
 		</div>
 		<div class="flex-2">
 			<img
-				class="!h-full !w-full object-cover"
-				src="https://chocolate-zebra-256559.hostingersite.com/wp-content/uploads/2026/08/white-cloud-scaled.jpeg"
+				class="!w-full !h-full object-cover"
+				src="https://chocolate-zebra-256559.hostingersite.com/wp-content/uploads/2026/08/low-angle-shot-facade-white-modern-building-blue-clear-sky.png"
 				alt="placeholder"
 			>
 		</div>

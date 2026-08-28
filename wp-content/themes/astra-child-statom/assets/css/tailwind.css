@@ -236,6 +236,9 @@
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
   }
+  .\!mb-0 {
+    margin-bottom: 0px !important;
+  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -277,9 +280,6 @@
   }
   .max-h-16 {
     max-height: calc(var(--spacing) * 16);
-  }
-  .min-h-\[22rem\] {
-    min-height: 22rem;
   }
   .min-h-\[80vh\] {
     min-height: 80vh;
@@ -453,9 +453,6 @@
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
-  .p-8 {
-    padding: calc(var(--spacing) * 8);
-  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -465,11 +462,20 @@
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
+  .px-12 {
+    padding-inline: calc(var(--spacing) * 12);
+  }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
   }
   .py-12 {
     padding-block: calc(var(--spacing) * 12);
+  }
+  .py-16 {
+    padding-block: calc(var(--spacing) * 16);
+  }
+  .pt-12 {
+    padding-top: calc(var(--spacing) * 12);
   }
   .pt-16 {
     padding-top: calc(var(--spacing) * 16);
@@ -633,7 +639,7 @@ h3 {
   font-size: 1.2rem;
 }
 .st-text-promo {
-  font-size: 3rem;
+  font-size: 2.33rem;
 }
 .st-bg-fade-primary {
   background-image: linear-gradient(to bottom, var(--color-primary), color-mix(in srgb, #252a35, white 15%));
