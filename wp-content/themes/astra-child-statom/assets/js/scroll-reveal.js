@@ -1,21 +1,27 @@
 /**
  * Generic "reveal on scroll" animator.
  *
- * A stable (untransformed) wrapper gets `.st-reveal`, and the element
- * that should actually animate into place goes inside it with
- * `.st-reveal-item` (styled in tailwind-src.css to start translated/
- * hidden, revealing via a `.st-reveal.is-visible .st-reveal-item` rule).
- * We observe the wrapper rather than the animated item itself - if we
- * observed the item directly, its own CSS transform would move its
- * measured position before the animation ever ran, throwing off (or
- * entirely preventing) the intersection check. This file finds every
- * `.st-reveal` on the page and adds `.is-visible` to it the first time
- * it scrolls into view, so any partial can opt into the effect with no
- * extra per-instance JS.
+ * Two ways to opt in, styled in tailwind-src.css:
+ *
+ * - `.st-reveal-scale` - put directly on the element that should pop in.
+ *   A scale transform doesn't move the element's measured position, so it's
+ *   safe to observe and animate the same element.
+ * - `.st-reveal` + `.st-reveal-item` - for translate-based effects. A
+ *   stable (untransformed) wrapper gets `.st-reveal`, and the element that
+ *   actually moves goes inside it with `.st-reveal-item` (revealed via a
+ *   `.st-reveal.is-visible .st-reveal-item` rule). We observe the wrapper
+ *   rather than the moving item itself - if we observed the item directly,
+ *   its own translate would shift its measured position before the
+ *   animation ever ran, throwing off (or entirely preventing) the
+ *   intersection check.
+ *
+ * Either way, this file finds every matching element on the page and adds
+ * `.is-visible` to it the first time it scrolls into view, so any partial
+ * can opt into the effect with no extra per-instance JS.
  */
 ( function () {
 	function initScrollReveal() {
-		var elements = document.querySelectorAll( '.st-reveal' );
+		var elements = document.querySelectorAll( '.st-reveal, .st-reveal-scale' );
 
 		if ( ! elements.length ) {
 			return;

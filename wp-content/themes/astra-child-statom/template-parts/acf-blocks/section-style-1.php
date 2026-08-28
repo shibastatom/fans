@@ -26,6 +26,9 @@ $design = $gbo['section_design'];
 			<?php include __DIR__ . '/section-style-1/design-1.php'; ?>
 		<?php endif ?>
 
+		<?php if ( $gbo_additional_part === 'test-cards' ) : ?>
+			<?php include __DIR__ . '/partials/test-cards.php'; ?>
+		<?php endif; ?>
 		<?php if ( $gbo_additional_part === 'feature-cards' ) : ?>
 			<?php include __DIR__ . '/partials/feature-cards.php'; ?>
 		<?php endif; ?>
