@@ -50,5 +50,8 @@ $design = $gbo['section_design'];
 		<?php if ( $gbo_additional_part === 'sticky-cards' ) : ?>
 			<?php include __DIR__ . '/partials/sticky-cards.php'; ?>
 		<?php endif; ?>
+		<?php if ( $gbo_additional_part === 'scroll-flick-cards' ) : ?>
+			<?php include __DIR__ . '/partials/scroll-flick-cards.php'; ?>
+		<?php endif; ?>
 	</div>
 </section>

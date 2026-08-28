@@ -57,5 +57,12 @@ function astra_child_enqueue_scripts() {
         filemtime( get_stylesheet_directory() . '/assets/js/scroll-reveal.js' ),
         true
     );
+    wp_enqueue_script(
+        'astra-child-scroll-flick-cards',
+        get_stylesheet_directory_uri() . '/assets/js/scroll-flick-cards.js',
+        array(),
+        filemtime( get_stylesheet_directory() . '/assets/js/scroll-flick-cards.js' ),
+        true
+    );
 }
 add_action( 'wp_enqueue_scripts', 'astra_child_enqueue_scripts' );
