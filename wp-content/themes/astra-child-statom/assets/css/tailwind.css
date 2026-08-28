@@ -180,6 +180,9 @@
   .absolute {
     position: absolute;
   }
+  .fixed {
+    position: fixed;
+  }
   .relative {
     position: relative;
   }
@@ -762,6 +765,15 @@ h3 {
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 .st-reveal.is-visible .st-word {
+  opacity: 1;
+  transform: translateY(0);
+}
+.st-heading-reveal {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+.st-heading-reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }

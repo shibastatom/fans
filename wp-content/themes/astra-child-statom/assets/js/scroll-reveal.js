@@ -3,10 +3,13 @@
  *
  * Two ways to opt in, styled in tailwind-src.css:
  *
- * - `.st-reveal-scale` - put directly on the element that should pop in.
- *   A scale transform doesn't move the element's measured position, so it's
- *   safe to observe and animate the same element.
- * - `.st-reveal` + `.st-reveal-item` - for translate-based effects. A
+ * - `.st-reveal-scale` / `.st-heading-reveal` - put directly on the element
+ *   that should animate itself. Safe to observe and animate the same
+ *   element as long as its transform only scales or shifts it a small,
+ *   fixed amount (a few rem at most) - not enough to meaningfully change
+ *   whether it's in the viewport.
+ * - `.st-reveal` + `.st-reveal-item` - for larger translate-based effects
+ *   (e.g. a full-height slide). A
  *   stable (untransformed) wrapper gets `.st-reveal`, and the element that
  *   actually moves goes inside it with `.st-reveal-item` (revealed via a
  *   `.st-reveal.is-visible .st-reveal-item` rule). We observe the wrapper
@@ -21,7 +24,7 @@
  */
 ( function () {
 	function initScrollReveal() {
-		var elements = document.querySelectorAll( '.st-reveal, .st-reveal-scale' );
+		var elements = document.querySelectorAll( '.st-reveal, .st-reveal-scale, .st-heading-reveal' );
 
 		if ( ! elements.length ) {
 			return;

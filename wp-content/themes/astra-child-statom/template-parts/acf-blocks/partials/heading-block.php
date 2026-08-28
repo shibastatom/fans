@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php endif; ?>
 
 	<?php if ( $gbo_heading ) : ?>
-		<h2 class="<?= $gbo_heading_text_alignment; ?>"><?= $gbo_heading; ?></h2>
+		<h2 class="<?= $gbo_heading_text_alignment; ?> st-heading-reveal"><?= $gbo_heading; ?></h2>
 	<?php endif; ?>
 
 	<?php if ( $gbo_subheading ) : ?>
