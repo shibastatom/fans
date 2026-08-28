@@ -232,6 +232,15 @@ h3 {
 	opacity: 1;
 	transform: translateX(0);
 }
+.st-reveal-bottom {
+	opacity: 0;
+	transform: translateY(5rem);
+	transition: transform 1s ease, opacity 1s ease;
+}
+.st-reveal-bottom.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
 .st-reveal-scale {
 	/* transform: scale(0.85); */
 	transform: scale(0.25);
