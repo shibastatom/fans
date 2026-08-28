@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php endif; ?>
 	</div>
 	<?php elseif ( (!empty($gbo_content_left_content)  || $gbo_heading_positioning == 'left-content') ) : ?>
-	<div class="<?= $gbo_content_left_flex; ?> <?= $gbo_content_left_positioning; ?>">
+	<div class="<?= $gbo_content_left_flex; ?> <?= $gbo_content_left_positioning; ?> st-reveal-left">
 		<div>
 			<?php if ( $gbo_heading_positioning == 'left-content' ) : ?>
 				<?php include __DIR__ . '/../partials/heading-block.php'; ?>
@@ -82,7 +82,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php endif; ?>
 	</div>
 	<?php elseif ( (!empty($gbo_content_right_content)) || $gbo_heading_positioning == 'right-content' ) : ?>
-	<div class="<?= $gbo_content_right_flex; ?> <?= $gbo_content_right_positioning; ?>">
+	<div class="<?= $gbo_content_right_flex; ?> <?= $gbo_content_right_positioning; ?> st-reveal-right">
 		<div>
 			<?php if ( $gbo_heading_positioning == 'right-content' ) : ?>
 				<?php include __DIR__ . '/../partials/heading-block.php'; ?>

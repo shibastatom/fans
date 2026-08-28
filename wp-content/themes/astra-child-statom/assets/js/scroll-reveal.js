@@ -24,7 +24,7 @@
  */
 ( function () {
 	function initScrollReveal() {
-		var elements = document.querySelectorAll( '.st-reveal, .st-reveal-scale, .st-heading-reveal' );
+		var elements = document.querySelectorAll( '.st-reveal, .st-reveal-scale, .st-heading-reveal, .st-reveal-left, .st-reveal-right' );
 
 		if ( ! elements.length ) {
 			return;

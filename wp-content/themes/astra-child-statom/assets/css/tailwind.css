@@ -777,6 +777,24 @@ h3 {
   opacity: 1;
   transform: translateY(0);
 }
+.st-reveal-left {
+  opacity: 0;
+  transform: translateX(-10rem);
+  transition: transform 1s ease, opacity 1s ease;
+}
+.st-reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.st-reveal-right {
+  opacity: 0;
+  transform: translateX(10rem);
+  transition: transform 1s ease, opacity 1s ease;
+}
+.st-reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
 .st-reveal-scale {
   transform: scale(0.25);
   opacity: 0;
