@@ -54,6 +54,22 @@ h3 {
 .st-bg-fade-primary {
 	background-image: linear-gradient(to bottom, var(--color-primary), color-mix(in srgb, var(--color-primary), white 15%));
 }
+.st-bg-fade-secondary-1 {
+	background-image: linear-gradient(
+		to bottom,
+		rgb(from var(--color-secondary) r g b / 0%) 0,
+		rgb(from var(--color-secondary) r g b / 0%) 1rem,
+		rgb(from var(--color-secondary) r g b / 17.5%) 100%
+	);
+}
+.st-bg-fade-secondary-1-r {
+	background-image: linear-gradient(
+		to top,
+		rgb(from var(--color-secondary) r g b / 0%) 0,
+		rgb(from var(--color-secondary) r g b / 0%) 1rem,
+		rgb(from var(--color-secondary) r g b / 17.5%) 100%
+	);
+}
 
 .bg-primary,
 .bg-primary\/90,

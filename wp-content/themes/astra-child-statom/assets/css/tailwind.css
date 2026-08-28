@@ -599,6 +599,12 @@ h3 {
     background-image: linear-gradient(to bottom, var(--color-primary), color-mix(in srgb, var(--color-primary), white 15%));
   }
 }
+.st-bg-fade-secondary-1 {
+  background-image: linear-gradient(	to bottom,	rgb(from var(--color-secondary) r g b / 0%) 0,	rgb(from var(--color-secondary) r g b / 0%) 1rem,	rgb(from var(--color-secondary) r g b / 17.5%) 100%	);
+}
+.st-bg-fade-secondary-1-r {
+  background-image: linear-gradient(	to top,	rgb(from var(--color-secondary) r g b / 0%) 0,	rgb(from var(--color-secondary) r g b / 0%) 1rem,	rgb(from var(--color-secondary) r g b / 17.5%) 100%	);
+}
 .bg-primary, .bg-primary\/90, .bg-primary\/80, .bg-primary\/70, .bg-primary\/50, .bg-primary :is(h1, h2, h3, h4, h5, h6), .bg-primary\/90 :is(h1, h2, h3, h4, h5, h6), .bg-primary\/80 :is(h1, h2, h3, h4, h5, h6), .bg-primary\/70 :is(h1, h2, h3, h4, h5, h6), .bg-primary\/50 :is(h1, h2, h3, h4, h5, h6) {
   color: var(--color-white) !important;
 }
