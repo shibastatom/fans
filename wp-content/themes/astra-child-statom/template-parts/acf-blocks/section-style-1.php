@@ -47,5 +47,8 @@ $design = $gbo['section_design'];
 		<?php if ( $gbo_additional_part === 'cta' ) : ?>
 			<?php include __DIR__ . '/partials/cta.php'; ?>
 		<?php endif; ?>
+		<?php if ( $gbo_additional_part === 'sticky-cards' ) : ?>
+			<?php include __DIR__ . '/partials/sticky-cards.php'; ?>
+		<?php endif; ?>
 	</div>
 </section>
