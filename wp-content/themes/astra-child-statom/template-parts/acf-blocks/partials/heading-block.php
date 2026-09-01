@@ -24,8 +24,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<h2 class="<?= $gbo_heading_text_alignment; ?> st-heading-reveal"><?= $gbo_heading; ?></h2>
 	<?php endif; ?>
 
-	<?php if ( $gbo_subheading ) : ?>
+	<?php if ( $gbo_subheading || $gbo_heading_content_content ) : ?>
 		<div class="st-max-w-60perc">
+			<?php if ( $gbo_subheading ) : ?>
 			<p class="st-hero-text-lead st-reveal">
 				<?php
 				$gbo_subheading_words = explode( ' ', wp_strip_all_tags( $gbo_subheading ) );
@@ -38,6 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				}
 				?>
 			</p>
+			<?php endif; ?>
 		<?php if ( $gbo_heading_content_content ) : ?>
 			<?= $gbo_heading_content_content; ?>
 		<?php endif; ?>

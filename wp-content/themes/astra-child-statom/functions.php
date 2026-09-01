@@ -72,3 +72,64 @@ add_action( 'wp_enqueue_scripts', 'astra_child_enqueue_scripts' );
 add_action('init', function () {
     add_post_type_support('page', 'excerpt');
 });
+
+
+// Add the Format (paragraph/heading) dropdown and the Styles dropdown to the "Basic" WYSIWYG toolbar.
+function my_mce_buttons_2($buttons) {
+    array_unshift($buttons, 'styleselect');
+    return $buttons;
+}
+add_filter('mce_buttons_2', 'my_mce_buttons_2');
+
+// Custom entries for the Styles dropdown - lets editors highlight text and
+// apply a theme colour class instead of typing raw HTML.
+add_filter( 'tiny_mce_before_init', function ( $settings ) {
+    $settings['style_formats'] = wp_json_encode( array(
+        array(
+            'title' => 'Text Colours',
+            'items' => array(
+                array(
+                    'title'    => 'Primary Text',
+                    'selector' => 'p, h1, h2, h3, h4, h5, h6, span, ul',
+                    'classes'  => 'text-primary',
+                ),
+                array(
+                    'title'    => 'Secondary Text',
+                    'selector' => 'p, h1, h2, h3, h4, h5, h6, span, ul',
+                    'classes'  => 'text-secondary',
+                ),
+                array(
+                    'title'    => 'Tertiary Text',
+                    'selector' => 'p, h1, h2, h3, h4, h5, h6, span, ul',
+                    'classes'  => 'text-tertiary',
+                ),
+            ),
+        ),
+        array(
+            'title' => 'Text Size',
+            'items' => array(
+                array(
+                    'title'    => 'Hero Text Lead',
+                    'selector' => 'p, h1, h2, h3, h4, h5, h6, span, ul',
+                    'classes'  => 'st-hero-text-lead',
+                ), 
+                array(
+                    'title'    => 'Text Promo',
+                    'selector' => 'p, h1, h2, h3, h4, h5, h6, span, ul',
+                    'classes'  => 'st-text-promo',
+                ), 
+            ),
+        ),
+        array(
+            'title' => 'Animation',
+            'items' => array(
+                array(
+                    'title'    => 'ST Reveal',
+                    'selector' => 'p',
+                    'classes'  => 'st-reveal',
+                ), 
+            ),
+        ),
+    ) );
+    return $settings;
+} );
