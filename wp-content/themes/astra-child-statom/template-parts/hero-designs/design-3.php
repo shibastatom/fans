@@ -11,14 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-// global $hero_design_f_image;
-
-// $get_general_page_options = get_field(
-// 	'general_page_content'
-// );
-// $gpo = $get_general_page_options;
-// $gpo_alt_title = $gpo['alt_title'];
-
 include get_stylesheet_directory() . '/template-parts/acf-blocks/partials/general-page-content.php';
 ?>
 

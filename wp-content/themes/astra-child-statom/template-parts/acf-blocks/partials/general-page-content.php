@@ -28,4 +28,3 @@ if ( ! empty( $gpo_alt_featured_image['url'] ) ) {
 	$post_thumbnail_id = get_post_thumbnail_id();
 	$hero_design_f_image = $post_thumbnail_id ? acf_get_attachment( $post_thumbnail_id ) : null;
 }
-var_dump($gpo_alt_title);

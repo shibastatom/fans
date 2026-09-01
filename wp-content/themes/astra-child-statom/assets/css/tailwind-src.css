@@ -71,6 +71,9 @@ h3 {
 	);
 }
 
+.st-highlight {
+	color: var(--color-secondary);
+}
 .bg-primary .st-highlight {
 	color: var(--color-secondary);
 }

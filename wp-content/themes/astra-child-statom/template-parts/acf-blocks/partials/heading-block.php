@@ -25,18 +25,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php endif; ?>
 
 	<?php if ( $gbo_subheading ) : ?>
-		<p class="st-hero-text-lead st-max-w-60perc st-reveal">
-			<?php
-			$gbo_subheading_words = explode( ' ', wp_strip_all_tags( $gbo_subheading ) );
-			foreach ( $gbo_subheading_words as $gbo_subheading_word_index => $gbo_subheading_word ) {
-				printf(
-					'<span class="st-word" style="transition-delay: %ss;">%s</span> ',
-					esc_attr( $gbo_subheading_word_index * 0.033 ),
-					esc_html( $gbo_subheading_word )
-				);
-			}
-			?>
-		</p>
+		<div class="st-max-w-60perc">
+			<p class="st-hero-text-lead st-reveal">
+				<?php
+				$gbo_subheading_words = explode( ' ', wp_strip_all_tags( $gbo_subheading ) );
+				foreach ( $gbo_subheading_words as $gbo_subheading_word_index => $gbo_subheading_word ) {
+					printf(
+						'<span class="st-word" style="transition-delay: %ss;">%s</span> ',
+						esc_attr( $gbo_subheading_word_index * 0.033 ),
+						esc_html( $gbo_subheading_word )
+					);
+				}
+				?>
+			</p>
+		<?php if ( $gbo_heading_content_content ) : ?>
+			<?= $gbo_heading_content_content; ?>
+		<?php endif; ?>
+		</div>
+		
 	<?php endif; ?>
 
 	<?php if ( $gbo_button_1 ) : ?>

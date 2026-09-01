@@ -659,6 +659,9 @@ h3 {
 .st-bg-fade-secondary-1-r {
   background-image: linear-gradient(	to top,	rgb(from var(--color-secondary) r g b / 0%) 0,	rgb(from var(--color-secondary) r g b / 0%) 1rem,	rgb(from var(--color-secondary) r g b / 17.5%) 100%	);
 }
+.st-highlight {
+  color: var(--color-secondary);
+}
 .bg-primary .st-highlight {
   color: var(--color-secondary);
 }
