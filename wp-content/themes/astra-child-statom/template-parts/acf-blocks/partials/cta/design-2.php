@@ -20,8 +20,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<h2 class="uppercase ">
 				<?= $gsc_cta_block_card['cta_card']['heading']; ?>
 			</h2>
-			<p class="st-hero-text-lead st-max-w-60perc text-white mt-4">Every great project starts with a conversation. Tell us about your goals, challenges, or ideas, and we’ll help you find the right solution.</p>
-			<a href="#" class="st-btn-primary mt-6 inline-block">Get in touch</a>
+			<p class="st-hero-text-lead st-max-w-60perc text-white mt-4"><?= $gsc_cta_block_card['cta_card']['subheading']; ?></p>
+			<?php if ( ! empty( $gsc_cta_block_card['cta_card']['button_1'] ) ) : ?>
+				<a
+					href="<?= esc_url( $gsc_cta_block_card['cta_card']['button_1']['url'] ); ?>"
+					target="<?= esc_attr( $gsc_cta_block_card['cta_card']['button_1']['target'] ); ?>"
+					class="st-btn-primary mt-6 inline-block"
+				><?= esc_html( $gsc_cta_block_card['cta_card']['button_1']['title'] ); ?></a>
+			<?php endif; ?>
 		</div>
 	</div>
 </div>
