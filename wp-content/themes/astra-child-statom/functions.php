@@ -66,3 +66,9 @@ function astra_child_enqueue_scripts() {
     );
 }
 add_action( 'wp_enqueue_scripts', 'astra_child_enqueue_scripts' );
+
+
+// EXCERPT
+add_action('init', function () {
+    add_post_type_support('page', 'excerpt');
+});

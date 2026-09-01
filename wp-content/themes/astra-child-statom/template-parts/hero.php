@@ -12,24 +12,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<section class="st-section-s2 bg-primary min-h-[80vh] flex">
-	<div class="ast-container flex flex-col md:flex-row items-stretch gap-8">
-		<!-- LEFT SIDE -->
-		<div class="page-hero__content flex-1 flex flex-col justify-center">
-			<div>
-				<p class="uppercase !text-secondary">London Residential & Mixed-use development</p>
-				<h1 class="_heading !text-white uppercase">Building exceptional <span class="text-secondary">places.</span></h1>
-				<p class="st-hero-text-lead color-text text-text">Fancourt Property Group develops outstanding residential and mixed-use communities across London; acquired, optimised and delivered without compromise.</p>
-				<button type="button" class="st-btn-secondary">Secondary</button>
-				<button type="button" class="st-btn-primary">Primary</button>
-			</div>
-		</div>
+<?php
+$get_general_page_options = get_field(
+	'general_page_content'
+);
+$gpo = $get_general_page_options;
+$get_gpo_hero_design = $gpo['hero_design'];
+$gpo_hero_design = ! empty( $get_gpo_hero_design ) ? sanitize_file_name( $get_gpo_hero_design ) : 'default';
+$gpo_alt_featured_image = $gpo['alt_featured_image'];
 
-		<!-- RIGHT SIDE -->
-		<?php if ( has_post_thumbnail() ) : ?>
-		<div class="flex-1 flex justify-center">
-			<?php the_post_thumbnail( 'large', array( 'class' => '!h-full !w-full object-cover' ) ); ?>
-		</div>
-		<?php endif; ?>
-	</div>
-</section>
+if ( ! empty( $gpo_alt_featured_image['url'] ) ) {
+	$hero_design_f_image = $gpo_alt_featured_image;
+} else {
+	$post_thumbnail_id = get_post_thumbnail_id();
+	$hero_design_f_image = $post_thumbnail_id ? acf_get_attachment( $post_thumbnail_id ) : null;
+}
+
+$GLOBALS['hero_design_f_image'] = $hero_design_f_image;
+
+get_template_part( 'template-parts/hero-designs/' . $gpo_hero_design, null, array( 'hero_design_f_image' => $hero_design_f_image ) );
+?>

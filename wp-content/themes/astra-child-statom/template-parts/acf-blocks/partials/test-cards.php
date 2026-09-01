@@ -19,7 +19,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+
+
+$get_gbo_cards_set = $gbo_cards_set;
+$chosen_cards_set = '';
+switch ( $get_gbo_cards_set ) {
+	case 'philosophy':
+		$chosen_cards_set = 'philosophy';
+		break;
+	default:
+		$chosen_cards_set = 'philosophy';
+		break;
+}
+$gsc_features_cards = get_field( 'featured_cards', 'option' );
+$gsc_features_cards_chosen_set = $gsc_features_cards[ $chosen_cards_set ] ?? array();
+
+
+
+
+
+
 $feature_cards = array();
+// $feature_cards = $gsc_features_cards_chosen_set
 
 if ( have_rows( 'feature_cards' ) ) {
 	while ( have_rows( 'feature_cards' ) ) {
@@ -31,6 +52,8 @@ if ( have_rows( 'feature_cards' ) ) {
 			'copy'  => get_sub_field( 'copy' ),
 		);
 	}
+} elseif ( ! empty( $gsc_features_cards_chosen_set ) ) {
+	$feature_cards = $gsc_features_cards_chosen_set;
 } else {
 	// Dummy data for preview - remove once the ACF repeater has real rows.
 	$feature_cards = array(
@@ -66,6 +89,9 @@ if ( empty( $feature_cards ) ) {
 // $overlap_classes = $gbo_additional_part_overlap ? 'relative z-10 mt-16 mx-16 p-6' : '';
 // var_dump($gbo_additional_part_overlap);
 $overlap_classes = $gbo_additional_part_overlap == true ? 'st-additional-overlap-container' : '';
+
+
+
 ?>
 <div class="<?= $overlap_classes; ?> <?= $gbo_container_width; ?> pb-16">
 	<div class="st-additional-overlap-container-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">

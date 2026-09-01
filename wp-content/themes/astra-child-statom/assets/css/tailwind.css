@@ -320,6 +320,9 @@
   .flex-col {
     flex-direction: column;
   }
+  .flex-row {
+    flex-direction: row;
+  }
   .items-center {
     align-items: center;
   }
@@ -353,6 +356,9 @@
   .border-t-8 {
     border-top-style: var(--tw-border-style);
     border-top-width: 8px;
+  }
+  .border-primary {
+    border-color: var(--color-primary);
   }
   .border-secondary {
     border-color: var(--color-secondary);
@@ -815,8 +821,8 @@ h3 {
 }
 .st-heading-reveal {
   opacity: 0;
-  transform: translateY(1rem);
-  transition: transform 0.6s ease, opacity 0.6s ease;
+  transform: translateY(2rem);
+  transition: transform 1s ease, opacity 1s ease;
 }
 .st-heading-reveal.is-visible {
   opacity: 1;

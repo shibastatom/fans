@@ -94,6 +94,7 @@ switch ( $gbo_content_split ) {
 // var_dump($gbo_content_left);
 $gbo_additional_part = $gbo['additional_part'];
 $gbo_additional_part_overlap = $gbo['additional_part_overlap'];
+$gbo_cards_set = $gbo['cards_set'];
 $gbo_background_image = $gbo['background_image'];
 $gbo_background_colour = '';
 $get_gbo_background_colour = $gbo['background_colours'];
