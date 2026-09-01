@@ -395,6 +395,9 @@
   .bg-primary {
     background-color: var(--color-primary);
   }
+  .bg-primary\! {
+    background-color: var(--color-primary) !important;
+  }
   .bg-primary\/50 {
     background-color: color-mix(in srgb, #252a35 50%, transparent);
     @supports (color: color-mix(in lab, red, red)) {

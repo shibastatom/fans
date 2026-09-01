@@ -177,6 +177,11 @@ switch ( $get_gbo_container_width ) {
 		break;
 }
 
+$gbo_cta_block_options = $gbo['cta_block_options'];
+$gbo_cta_block_options_design = $gbo_cta_block_options['design'];
+$gbo_cta_block_options_cta_block_card = $gbo_cta_block_options['cta_block_card'];
+
+
 $subheading      = get_sub_field( 'subheading' );
 $button          = get_sub_field( 'button' );
 $image           = get_sub_field( 'image' );
