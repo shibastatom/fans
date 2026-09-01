@@ -71,6 +71,13 @@ h3 {
 	);
 }
 
+.bg-primary .st-highlight {
+	color: var(--color-secondary);
+}
+.bg-secondary .st-highlight {
+	color: var(--color-white);
+}
+
 .bg-primary,
 .bg-primary\/90,
 .bg-primary\/80,
