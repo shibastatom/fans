@@ -133,3 +133,19 @@ add_filter( 'tiny_mce_before_init', function ( $settings ) {
     ) );
     return $settings;
 } );
+
+// Renders text as staggered, individually fading-in <span> words for the
+// scroll reveal system (pairs with the .st-reveal / .st-word CSS classes).
+if ( ! function_exists( 'st_render_word_reveal' ) ) {
+    function st_render_word_reveal( $text ) {
+        $words = explode( ' ', wp_strip_all_tags( $text ) );
+
+        foreach ( $words as $word_index => $word ) {
+            printf(
+                '<span class="st-word" style="transition-delay: %ss;">%s</span> ',
+                esc_attr( $word_index * 0.033 ),
+                esc_html( $word )
+            );
+        }
+    }
+}

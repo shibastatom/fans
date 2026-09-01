@@ -24,7 +24,10 @@ class="st-section-s2 bg-primary bg-cover bg-center bg-no-repeat h-[80vh] flex"
 			<div>
 				<p>Hero Design 3</p>
 				<h1 class="_heading uppercase !text-secondary"><?= $gpo_alt_title ?></h1>
-				<p class="st-hero-text-lead"><?php echo esc_html( get_the_excerpt() ); ?></p>
+				<!-- <p class="st-hero-text-lead st-reveal"><?php echo esc_html( get_the_excerpt() ); ?></p> -->
+				<p class="st-hero-text-lead st-reveal">
+					<?php st_render_word_reveal( get_the_excerpt() ); ?>
+				</p>
 				<button type="button" class="st-btn-secondary">Learn more</button>
 			</div>
 		</div>
