@@ -11,7 +11,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-global $hero_design_f_image;
+// global $hero_design_f_image;
+
+// $get_general_page_options = get_field(
+// 	'general_page_content'
+// );
+// $gpo = $get_general_page_options;
+// $gpo_alt_title = $gpo['alt_title'];
+
+include get_stylesheet_directory() . '/template-parts/acf-blocks/partials/general-page-content.php';
 ?>
 
 <section
@@ -23,7 +31,7 @@ class="st-section-s2 bg-primary bg-cover bg-center bg-no-repeat h-[80vh] flex"
 		<div class="page-hero__content flex-1 flex flex-col justify-center">
 			<div>
 				<p>Hero Design 3</p>
-				<h1 class="_heading !text-white uppercase"><?php the_title(); ?></h1>
+				<h1 class="_heading !text-white uppercase"><?= $gpo_alt_title ?></h1>
 				<p class="st-hero-text-lead"><?php echo esc_html( get_the_excerpt() ); ?></p>
 				<button type="button" class="st-btn-secondary">Learn more</button>
 			</div>
