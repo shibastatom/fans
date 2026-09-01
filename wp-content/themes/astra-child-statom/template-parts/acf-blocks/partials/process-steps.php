@@ -154,9 +154,12 @@ $process_steps = array(
 <div class="<?= $gbo_container_width; ?> pb-16">
 	<div class="flex flex-col gap-8">
 		<?php foreach ( $process_steps as $step_index => $step ) : ?>
-			<div class="flex gap-6 items-start">
-				<div class="shrink-0 w-14 text-3xl font-bold !text-secondary">
-					<?php echo esc_html( sprintf( '%02d', $step_index + 1 ) ); ?>
+			<div
+				class="flex gap-6 items-start st-reveal-scale"
+				style="transition-delay: <?= $step_index * 0.1; ?>s;"
+			>
+				<div class="shrink-0 w-14 font-bold !text-secondary">
+					<p class="st-text-promo"><?php echo esc_html( sprintf( '%02d', $step_index + 1 ) ); ?></p>
 				</div>
 
 				<div class="flex-1 bg-white px-6 py-8 border-secondary border-t-8 shadow-lg">
@@ -164,7 +167,7 @@ $process_steps = array(
 						<i class="<?php echo esc_attr( $step['icon'] ); ?> text-3xl !text-secondary !mb-8" aria-hidden="true"></i>
 					<?php endif; ?>
 
-					<h3 class="uppercase !text-primary font-bold"><?php echo esc_html( $step['title'] ); ?></h3>
+					<h3 class="uppercase !text-primary font-bold st-heading-reveal"><?php echo esc_html( $step['title'] ); ?></h3>
 
 					<?php
 					$step_columns = 2 === $step['columns'] ? array_chunk( $step['items'], ceil( count( $step['items'] ) / 2 ) ) : array( $step['items'] );
