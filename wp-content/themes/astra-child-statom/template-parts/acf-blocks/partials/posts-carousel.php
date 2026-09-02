@@ -49,6 +49,10 @@ $posts_carousel_options = array(
 		1024 => array( 'slidesPerView' => 3 ),
 	),
 );
+
+// Hardcoded for now - swap to preview a different card design. Will be
+// driven by a real field once one exists.
+$posts_carousel_card_design = 'design-1';
 ?>
 <div class="<?= $gbo_container_width; ?> pb-16">
 	<div class="st-swiper-carousel swiper" data-swiper-options='<?= esc_attr( wp_json_encode( $posts_carousel_options ) ); ?>'>
@@ -58,20 +62,7 @@ $posts_carousel_options = array(
 				$posts_carousel_query->the_post();
 				?>
 				<div class="swiper-slide">
-					<div class="h-full flex flex-col shadow-lg">
-						<?php if ( has_post_thumbnail() ) : ?>
-							<a href="<?php the_permalink(); ?>" class="block aspect-[4/3] overflow-hidden">
-								<?php the_post_thumbnail( 'medium_large', array( 'class' => 'block !w-full !h-full object-cover' ) ); ?>
-							</a>
-						<?php endif; ?>
-
-						<div class="p-6 bg-white flex flex-col flex-1">
-							<h3 class="uppercase !text-primary font-bold"><?php the_title(); ?></h3>
-							<p class="text-secondary uppercase">Location</p>
-							<p class="text-primary flex-1"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 20 ) ); ?></p>
-							<a href="<?php the_permalink(); ?>" class="st-btn-secondary mt-4 self-start">Read more</a>
-						</div>
-					</div>
+					<?php include __DIR__ . '/posts-card-designs/' . $posts_carousel_card_design . '.php'; ?>
 				</div>
 			<?php endwhile; ?>
 		</div>
