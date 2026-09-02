@@ -56,5 +56,8 @@ $design = $gbo['section_design'];
 		<?php if ( $gbo_additional_part === 'process-steps' ) : ?>
 			<?php include __DIR__ . '/partials/process-steps.php'; ?>
 		<?php endif; ?>
+		<?php if ( $gbo_additional_part === 'post-collection' ) : ?>
+			<?php include __DIR__ . '/partials/post-collection.php'; ?>
+		<?php endif; ?>
 	</div>
 </section>

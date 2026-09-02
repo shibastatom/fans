@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<div class="h-full flex flex-col shadow-lg">
+<div class="h-full flex flex-col">
 	<?php if ( has_post_thumbnail() ) : ?>
 		<a href="<?php the_permalink(); ?>" class="group relative block aspect-[3/4] overflow-hidden border-secondary border-t-8">
 			<?php the_post_thumbnail( 'medium_large', array( 'class' => 'block !w-full !h-full object-cover transition-transform duration-300 group-hover:scale-110' ) ); ?>
