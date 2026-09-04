@@ -32,6 +32,9 @@ h3 {
 .st-theme-border-1 {
 	@apply border-secondary border-t-8 border-b-8;
 }
+.st-parallax {
+	will-change: transform;
+}
 .st-max-w-60perc {
 	max-width: calc(var(--container-site) * 0.66);
 }
@@ -68,6 +71,13 @@ h3 {
 		rgb(from var(--color-secondary) r g b / 0%) 0,
 		rgb(from var(--color-secondary) r g b / 0%) 1rem,
 		rgb(from var(--color-secondary) r g b / 17.5%) 100%
+	);
+}
+.st-bg-half-secondary {
+	background-image: linear-gradient(
+		to bottom,
+		var(--color-white) 50%,
+		color-mix(in srgb, var(--color-secondary), white 15%) 50%
 	);
 }
 

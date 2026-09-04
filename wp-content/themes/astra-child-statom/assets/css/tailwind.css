@@ -11,8 +11,6 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-3xl: 48rem;
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
@@ -251,9 +249,6 @@
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
   }
-  .ml-auto {
-    margin-left: auto;
-  }
   .block {
     display: block;
   }
@@ -307,9 +302,6 @@
   }
   .max-w-3xl {
     max-width: var(--container-3xl);
-  }
-  .max-w-\[50\%\] {
-    max-width: 50%;
   }
   .flex-1 {
     flex: 1;
@@ -392,12 +384,6 @@
   .border-secondary {
     border-color: var(--color-secondary);
   }
-  .bg-black\/75 {
-    background-color: color-mix(in srgb, #000 75%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-black) 75%, transparent);
-    }
-  }
   .bg-primary {
     background-color: var(--color-primary);
   }
@@ -461,12 +447,6 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .bg-white\/10 {
-    background-color: color-mix(in srgb, #fff 10%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
-    }
-  }
   .bg-\[linear-gradient\(to_right\,var\(--color-primary\)_0\%\,transparent_30\%\,transparent_80\%\,var\(--color-primary\)_100\%\)\] {
     background-image: linear-gradient(to right,var(--color-primary) 0%,transparent 30%,transparent 80%,var(--color-primary) 100%);
   }
@@ -529,10 +509,6 @@
   }
   .text-right {
     text-align: right;
-  }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-3xl {
     font-size: var(--text-3xl);
@@ -698,6 +674,9 @@ h3 {
   border-bottom-width: 8px;
   border-color: var(--color-secondary);
 }
+.st-parallax {
+  will-change: transform;
+}
 .st-max-w-60perc {
   max-width: calc(var(--container-site) * 0.66);
 }
@@ -726,6 +705,12 @@ h3 {
 }
 .st-bg-fade-secondary-1-r {
   background-image: linear-gradient(	to top,	rgb(from var(--color-secondary) r g b / 0%) 0,	rgb(from var(--color-secondary) r g b / 0%) 1rem,	rgb(from var(--color-secondary) r g b / 17.5%) 100%	);
+}
+.st-bg-half-secondary {
+  background-image: linear-gradient(	to bottom,	var(--color-white) 50%,	color-mix(in srgb, #967d54, white 15%) 50%	);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-image: linear-gradient(	to bottom,	var(--color-white) 50%,	color-mix(in srgb, var(--color-secondary), white 15%) 50%	);
+  }
 }
 .st-highlight {
   color: var(--color-secondary);
