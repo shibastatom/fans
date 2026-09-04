@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<div class="<?= $gbo_container_width; ?> <?= $partial_padding ; ?>">
+<div class="<?= $gbo_container_width; ?> py-12">
 	<div
 	class="bg-primary st-bg-fade-primary! flex shadow-lg"
 	>

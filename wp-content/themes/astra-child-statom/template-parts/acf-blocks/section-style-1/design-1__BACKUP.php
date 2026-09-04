@@ -1,6 +1,6 @@
 <!-- 
  
-27/08/26 14:51
+03/09/26 12:51
 
 This is the version before the image animation
 
@@ -21,8 +21,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
+
+<?php if ( $gbo_hide_main_content !== true ) : ?>
 <div class="<?= $gbo_container_width; ?> py-12 flex flex-col">
-	<div class="w-full">
+	<div class="w-full st-reveal-bottom">
 		<!-- FULL WIDTH -->
 		<?php if ( $gbo_heading_positioning == 'top-content' ) : ?>
 			<?php include __DIR__ . '/../partials/heading-block.php'; ?>
@@ -34,17 +36,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php if ( $gbo_content_left_use_section_image == true ) : ?>
 	<div class="<?= $gbo_content_left_flex; ?> flex flex-col justify-between">
 		<?php if ( $gbo_section_image ) : ?>
-		<div class="st-theme-border-1 bg-primary">
-			<img
-				class="!h-full !w-full object-cover"
-				src="<?php echo esc_url( $gbo_section_image['url'] ); ?>"
-				alt="<?php echo esc_attr( $gbo_section_image['alt'] ); ?>"
+			<?php if ( $gbo_image_animation == 'animation-1' ) : ?>
+			<div 
+			class="st-theme-border-1 bg-secondary overflow-hidden st-reveal"
+			style="background-image: url('https://chocolate-zebra-256559.hostingersite.com/wp-content/uploads/2026/08/fancourt-pattern-large-scaled.jpg');"
 			>
-		</div>
+				<img
+					class="!h-full !w-full object-cover st-reveal-item"
+					src="<?php echo esc_url( $gbo_section_image['url'] ); ?>"
+					alt="<?php echo esc_attr( $gbo_section_image['alt'] ); ?>"
+				>
+			</div>
+			<?php else : ?>
+			<div class="st-theme-border-1 bg-secondary overflow-hidden">
+				<img
+					class="!h-full !w-full object-cover"
+					src="<?php echo esc_url( $gbo_section_image['url'] ); ?>"
+					alt="<?php echo esc_attr( $gbo_section_image['alt'] ); ?>"
+				>
+			</div>
+			<?php endif; ?>
 		<?php endif; ?>
 	</div>
 	<?php elseif ( (!empty($gbo_content_left_content)  || $gbo_heading_positioning == 'left-content') ) : ?>
-	<div class="<?= $gbo_content_left_flex; ?> <?= $gbo_content_left_positioning; ?>">
+	<div class="<?= $gbo_content_left_flex; ?> <?= $gbo_content_left_positioning; ?> st-reveal-left">
 		<div>
 			<?php if ( $gbo_heading_positioning == 'left-content' ) : ?>
 				<?php include __DIR__ . '/../partials/heading-block.php'; ?>
@@ -58,17 +73,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php if ( $gbo_content_right_use_section_image == true ) : ?>
 	<div class="<?= $gbo_content_right_flex; ?> flex flex-col justify-between">
 		<?php if ( $gbo_section_image ) : ?>
-		<div class="st-theme-border-1 bg-primary">
-			<img
-				class="!h-full !w-full object-cover"
-				src="<?php echo esc_url( $gbo_section_image['url'] ); ?>"
-				alt="<?php echo esc_attr( $gbo_section_image['alt'] ); ?>"
+			<?php if ( $gbo_image_animation == 'animation-1' ) : ?>
+			<div 
+			class="st-theme-border-1 bg-secondary overflow-hidden st-reveal"
+			style="background-image: url('https://chocolate-zebra-256559.hostingersite.com/wp-content/uploads/2026/08/fancourt-pattern-large-scaled.jpg');"
 			>
-		</div>
+				<img
+					class="!h-full !w-full object-cover st-reveal-item"
+					src="<?php echo esc_url( $gbo_section_image['url'] ); ?>"
+					alt="<?php echo esc_attr( $gbo_section_image['alt'] ); ?>"
+				>
+			</div>
+			<?php else : ?>
+			<div class="st-theme-border-1 bg-secondary overflow-hidden">
+				<img
+					class="!h-full !w-full object-cover"
+					src="<?php echo esc_url( $gbo_section_image['url'] ); ?>"
+					alt="<?php echo esc_attr( $gbo_section_image['alt'] ); ?>"
+				>
+			</div>
+			<?php endif; ?>
 		<?php endif; ?>
 	</div>
 	<?php elseif ( (!empty($gbo_content_right_content)) || $gbo_heading_positioning == 'right-content' ) : ?>
-	<div class="<?= $gbo_content_right_flex; ?> <?= $gbo_content_right_positioning; ?>">
+	<div class="<?= $gbo_content_right_flex; ?> <?= $gbo_content_right_positioning; ?> st-reveal-right">
 		<div>
 			<?php if ( $gbo_heading_positioning == 'right-content' ) : ?>
 				<?php include __DIR__ . '/../partials/heading-block.php'; ?>
@@ -79,3 +107,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php endif; ?>
 	</div>
 </div>
+<?php endif; ?>

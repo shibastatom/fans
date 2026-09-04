@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 
-<div class="<?= $gbo_container_width; ?> <?= $partial_padding ; ?>">
+<div class="<?= $gbo_container_width; ?> py-12">
 	<div class="flex text-center w-full">
 		<div class="flex-1 py-16 px-8">
 			<h2 class="uppercase ">

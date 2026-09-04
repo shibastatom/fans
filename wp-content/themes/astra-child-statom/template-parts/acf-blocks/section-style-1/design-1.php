@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <?php if ( $gbo_hide_main_content !== true ) : ?>
-<div class="<?= $gbo_container_width; ?> py-12 flex flex-col">
+<div class="<?= $gbo_container_width; ?> pt-12 pb-12 flex flex-col">
 	<div class="w-full st-reveal-bottom">
 		<!-- FULL WIDTH -->
 		<?php if ( $gbo_heading_positioning == 'top-content' ) : ?>
