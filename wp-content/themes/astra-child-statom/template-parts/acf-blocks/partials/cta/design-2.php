@@ -14,10 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 
-<div class="<?= $gbo_container_width; ?> py-12">
+<!-- <div class="<?= $gbo_container_width; ?> py-12"> -->
 	<div class="flex text-center w-full">
 		<div class="flex-1 py-16 px-8">
-			<h2 class="uppercase ">
+			<h2 class="uppercase">
 				<?= $gsc_cta_block_card['cta_card']['heading']; ?>
 			</h2>
 			<p class="st-hero-text-lead st-max-w-60perc text-white mt-4"><?= $gsc_cta_block_card['cta_card']['subheading']; ?></p>
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php endif; ?>
 		</div>
 	</div>
-</div>
+<!-- </div> -->
 
 
 

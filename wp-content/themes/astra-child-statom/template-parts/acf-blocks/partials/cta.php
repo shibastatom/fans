@@ -31,4 +31,9 @@ $gsc_cta_block_card_index = intval( $gbo_cta_block_options_cta_block_card );
 $gsc_cta_block_card = $gsc_cta_block_card[ $gsc_cta_block_card_index ] ?? null;
 
 
-include __DIR__ . '/cta/' . $cta_design . '.php';
+// include __DIR__ . '/cta/' . $cta_design . '.php';
+?>
+
+<div class="<?= $gbo_container_width; ?> py-12">
+	<?php include __DIR__ . '/cta/' . $cta_design . '.php'; ?>
+</div>
