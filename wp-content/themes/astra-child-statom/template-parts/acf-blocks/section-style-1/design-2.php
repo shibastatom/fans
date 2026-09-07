@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="flex flex-col md:flex-row items-stretch gap-8">
 	<!-- LEFT SIDE -->
 	<?php if ( $gbo_content_left_use_section_image == true ) : ?>
-	<div class="<?= $gbo_content_left_flex; ?> flex flex-col justify-between st-parallax">
+	<div class="<?= $gbo_content_left_flex; ?> flex flex-col justify-between <?= $gbo_section_image_parallax ?>">
 		<?php if ( $gbo_section_image ) : ?>
 			<?php if ( $gbo_image_animation == 'animation-1' ) : ?>
 			<div
@@ -64,7 +64,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<!-- RIGHT SIDE -->
 	<?php if ( $gbo_content_right_use_section_image == true ) : ?>
-	<div class="<?= $gbo_content_right_flex; ?> flex flex-col justify-between st-parallax">
+	<div class="<?= $gbo_content_right_flex; ?> flex flex-col justify-between <?= $gbo_section_image_parallax ?>">
 		<?php if ( $gbo_section_image ) : ?>
 			<?php if ( $gbo_image_animation == 'animation-1' ) : ?>
 			<div 

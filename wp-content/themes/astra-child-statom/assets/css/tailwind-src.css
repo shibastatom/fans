@@ -80,6 +80,25 @@ h3 {
 		color-mix(in srgb, var(--color-secondary), white 15%) 50%
 	);
 }
+.st-bg-vignette-primary {
+	background-image: linear-gradient(
+		to bottom right,
+		color-mix(in srgb, var(--color-primary), black 40%),
+		var(--color-primary) 50%,
+		color-mix(in srgb, var(--color-primary), black 40%)
+	);
+}
+@keyframes st-ken-burns {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.08);
+	}
+}
+.st-ken-burns {
+	animation: st-ken-burns 20s ease-in-out infinite alternate;
+}
 
 .st-highlight {
 	color: var(--color-secondary);

@@ -67,7 +67,7 @@ if ( empty( $stat_cards ) ) {
 }
 
 ?>
-<div class="<?= $gbo_container_width; ?> pb-16">
+<div class="<?= $gbo_container_width; ?> py-12">
 	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 w-full">
 		<?php foreach ( $stat_cards as $card_index => $card ) : ?>
 			<div

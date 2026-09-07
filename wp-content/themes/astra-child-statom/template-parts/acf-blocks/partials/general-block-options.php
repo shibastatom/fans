@@ -37,6 +37,7 @@ switch ( $gbo_heading_text_alignment ) {
 		break;
 }
 $gbo_section_image = $gbo['section_image'];
+$gbo_section_image_parallax = $gbo['section_image_parallax'] == true ? 'st-parallax' : '';
 $gbo_image_animation = $gbo['image_animation'];
 switch ( $gbo_image_animation ) {
 	case 'animation-1':
