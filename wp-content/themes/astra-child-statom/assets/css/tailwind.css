@@ -855,6 +855,12 @@ h3 {
   --tw-duration: 300ms;
   transition-duration: 300ms;
 }
+.bg-primary .st-btn-outline {
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
 .st-btn-outline::before {
   content: '';
   position: absolute;
@@ -865,8 +871,14 @@ h3 {
   transform-origin: left;
   transition: transform 0.3s ease;
 }
+.bg-primary .st-btn-outline::before {
+  background-color: var(--color-white);
+}
 .st-btn-outline:hover {
   color: var(--color-white);
+}
+.bg-primary .st-btn-outline:hover {
+  color: var(--color-primary);
 }
 .st-btn-outline:hover::before {
   transform: scaleX(1);

@@ -197,6 +197,9 @@ h3 {
 	isolation: isolate;
 	@apply inline-block rounded-none px-6 py-3 bg-transparent text-primary uppercase transition-colors duration-300 border-1 border-primary;
 }
+.bg-primary .st-btn-outline {
+	@apply border-1 border-white text-white;
+}
 .st-btn-outline::before {
 	content: '';
 	position: absolute;
@@ -207,8 +210,14 @@ h3 {
 	transform-origin: left;
 	transition: transform 0.3s ease;
 }
+.bg-primary .st-btn-outline::before {
+	background-color: var(--color-white);
+}
 .st-btn-outline:hover {
 	@apply text-white;
+}
+.bg-primary .st-btn-outline:hover {
+	@apply text-primary;
 }
 .st-btn-outline:hover::before {
 	transform: scaleX(1);
