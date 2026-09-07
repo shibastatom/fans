@@ -52,7 +52,8 @@ $posts_carousel_options = array(
 
 // Hardcoded for now - swap to preview a different card design. Will be
 // driven by a real field once one exists.
-$posts_carousel_card_design = 'design-2';
+
+// $posts_carousel_card_design = 'design-1';
 ?>
 <div class="<?= $gbo_container_width; ?> pb-16">
 	<div class="st-swiper-carousel swiper" data-swiper-options='<?= esc_attr( wp_json_encode( $posts_carousel_options ) ); ?>'>
@@ -62,7 +63,7 @@ $posts_carousel_card_design = 'design-2';
 				$posts_carousel_query->the_post();
 				?>
 				<div class="swiper-slide">
-					<?php include __DIR__ . '/posts-card-designs/' . $posts_carousel_card_design . '.php'; ?>
+					<?php include __DIR__ . '/posts-card-designs/' . $gbo_posts_cards_designs . '.php'; ?>
 				</div>
 			<?php endwhile; ?>
 		</div>
