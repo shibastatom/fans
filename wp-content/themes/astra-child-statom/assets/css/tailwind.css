@@ -725,6 +725,12 @@ h3 {
     background-image: linear-gradient(	to bottom,	var(--color-white) 50%,	color-mix(in srgb, var(--color-secondary), white 15%) 50%	);
   }
 }
+.st-bg-half-primary {
+  background-image: linear-gradient(	to bottom,	var(--color-white) 50%,	color-mix(in srgb, #252a35, white 0%) 50%	);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-image: linear-gradient(	to bottom,	var(--color-white) 50%,	color-mix(in srgb, var(--color-primary), white 0%) 50%	);
+  }
+}
 .st-bg-vignette-primary {
   background-image: linear-gradient(	to bottom right,	color-mix(in srgb, #252a35, black 40%),	var(--color-primary) 50%,	color-mix(in srgb, #252a35, black 40%)	);
   @supports (color: color-mix(in lab, red, red)) {

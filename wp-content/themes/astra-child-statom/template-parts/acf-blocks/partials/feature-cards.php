@@ -19,6 +19,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+$gsc_feature_cards = get_field( 'feature_cards', 'option' );
+var_dump($gsc_feature_cards);
+
 $feature_cards = array();
 
 if ( have_rows( 'feature_cards' ) ) {

@@ -31,8 +31,20 @@ switch ( $get_gbo_cards_set ) {
 		$chosen_cards_set = 'philosophy';
 		break;
 }
-$gsc_features_cards = get_field( 'featured_cards', 'option' );
-$gsc_features_cards_chosen_set = $gsc_features_cards[ $chosen_cards_set ] ?? array();
+$gsc_features_cards = get_field( 'feature_cards', 'option' );
+$gsc_features_cards_matched_set = current( array_filter( $gsc_features_cards, function ( $set ) use ( $chosen_cards_set ) {
+	return strtolower( $set['set_name'] ) === strtolower( $chosen_cards_set );
+} ) );
+$gsc_features_cards_chosen_set = $gsc_features_cards_matched_set['featured_cards'] ?? array();
+$gsc_features_cards_chosen_set = array_map( function ( $card ) {
+	return array(
+		'icon'  => $card['font_awesome_icon_class'] ?? '',
+		'title' => $card['heading'] ?? '',
+		'copy'  => $card['content'] ?? '',
+	);
+}, $gsc_features_cards_chosen_set );
+// var_dump($chosen_cards_set );
+// var_dump($gsc_features_cards);
 
 
 
@@ -97,19 +109,19 @@ $overlap_classes = $gbo_additional_part_overlap == true ? 'st-additional-overlap
 	<div class="st-additional-overlap-container-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
 		<?php foreach ( $feature_cards as $card_index => $card ) : ?>
 			<div
-				class="px-6 py-8 border-secondary border-t-8 bg-secondary-t20 shadow-lg st-reveal-scale"
+				class="px-6 py-8 border-secondary border-t-8 bg-white shadow-lg st-reveal-scale"
 				style="transition-delay: <?= $card_index * 0.1; ?>s;"
 			>
 				<?php if ( $card['icon'] ) : ?>
-					<i class="<?php echo esc_attr( $card['icon'] ); ?> text-5xl !text-secondary mb-4" aria-hidden="true"></i>
+					<i class="<?php echo esc_attr( $card['icon'] ); ?> text-5xl  mb-4" aria-hidden="true"></i>
 				<?php endif; ?>
 
 				<?php if ( $card['title'] ) : ?>
-					<h3 class="mt-4 uppercase !text-primary font-bold"><?php echo esc_html( $card['title'] ); ?></h3>
+					<h3 class="mt-4 uppercase !text-secondary font-bold"><?php echo esc_html( $card['title'] ); ?></h3>
 				<?php endif; ?>
 
 				<?php if ( $card['copy'] ) : ?>
-					<p class="mt-2 text-primary"><?php echo esc_html( $card['copy'] ); ?></p>
+					<p class="mt-2"><?php echo esc_html( $card['copy'] ); ?></p>
 				<?php endif; ?>
 			</div>
 		<?php endforeach; ?>

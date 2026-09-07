@@ -123,6 +123,9 @@ switch ( $get_gbo_background_colour ) {
 	case 'st-bg-fade-secondary-1-r':
 		$gbo_background_colour = 'st-bg-fade-secondary-1-r';
 		break;
+	case 'st-bg-half-primary':
+		$gbo_background_colour = 'st-bg-half-primary';
+		break;
 	case 'st-bg-half-secondary':
 		$gbo_background_colour = 'st-bg-half-secondary';
 		break;

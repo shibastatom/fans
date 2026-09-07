@@ -14,10 +14,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 // var_dump($gsc_cta_block_card['cta_card']['subheading']);
+// var_dump($gsc_cta_block_card['cta_card']['background_colours']);
 ?>
 <!-- <div class="<?= $gbo_container_width; ?> py-12"> -->
 	<div
-	class="bg-primary st-bg-fade-primary! flex shadow-lg overflow-hidden"
+	class="<?= $gsc_cta_block_card['cta_card']['background_colours']; ?> st-bg-fade-primary! flex shadow-lg overflow-hidden"
 	>
 		<div class="flex-3 py-16 px-8">
 			<!-- <h2 class="uppercase !text-white st-heading-reveal">Let's Discuss Your <span class="text-secondary">Next Project</span></h2> -->
