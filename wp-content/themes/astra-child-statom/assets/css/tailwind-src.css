@@ -54,6 +54,10 @@ h3 {
 	font-size: 2.33rem;
 }
 
+.st-contact-icon-size {
+	font-size: 1.75rem;
+}
+
 .st-bg-fade-primary {
 	background-image: linear-gradient(to bottom, var(--color-primary), color-mix(in srgb, var(--color-primary), white 15%));
 }
@@ -328,6 +332,13 @@ h3 {
 	transform: scale(1);
 	pointer-events: auto;
 	z-index: 1;
+}
+
+/* *** CONTACT FORM 7 RELATED *** */
+.wpcf7-form-control {
+	border: 2px solid var(--color-secondary) !important;
+	border-radius: 0 !important;
+	padding: 1.5rem !important;
 }
 
 
