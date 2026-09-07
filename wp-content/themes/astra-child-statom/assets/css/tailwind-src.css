@@ -47,8 +47,15 @@ h3 {
 	@apply py-24 w-full;
 }
 
+.st-hero-heading {
+	font-size: 5.5rem !important;
+}
 .st-hero-text-lead {
 	font-size: 1.2rem;
+}
+.st-hero-text-lead-2 {
+	font-size: 1.75rem;
+	line-height: 1.4;
 }
 .st-text-promo {
 	font-size: 2.33rem;
@@ -93,10 +100,15 @@ h3 {
 }
 .st-bg-vignette-primary {
 	background-image: linear-gradient(
-		to bottom right,
+		/* to bottom right,
 		color-mix(in srgb, var(--color-primary), black 40%),
 		var(--color-primary) 50%,
-		color-mix(in srgb, var(--color-primary), black 40%)
+		color-mix(in srgb, var(--color-primary), black 40%) */
+
+		to bottom right,
+		color-mix(in srgb, var(--color-primary), black 80%),
+		var(--color-primary) 80%,
+		color-mix(in srgb, var(--color-primary), black 80%)
 	);
 }
 @keyframes st-ken-burns {
