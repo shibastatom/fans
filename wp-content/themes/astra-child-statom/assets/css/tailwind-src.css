@@ -35,7 +35,8 @@ h3 {
 .st-theme-border-1 {
 	@apply border-secondary border-t-8 border-b-8;
 }
-.st-parallax {
+.st-parallax,
+.st-parallax-horizontal {
 	will-change: transform;
 }
 .st-max-w-60perc {
@@ -392,5 +393,4 @@ h3 {
 	border-radius: 0 !important;
 	padding: 1.5rem !important;
 }
-
 

@@ -50,7 +50,7 @@ $scroll_flick_cards = array(
 ?>
 <div class="st-scroll-flick" style="height: <?= count( $scroll_flick_cards ) * 100; ?>vh;">
 	<div class="st-scroll-flick-pin">
-		<div class="<?= $gbo_container_width; ?> flex flex-col md:flex-row items-center gap-8">
+		<div class="<?= $gbo_container_width; ?> flex flex-col md:flex-row items-center gap-12">
 			<!-- LEFT: STATIC COPY -->
 			<div class="flex-2">
 				<div class="<?= $gbo_content_left_flex; ?> <?= $gbo_content_left_positioning; ?> st-reveal-left">
@@ -64,7 +64,7 @@ $scroll_flick_cards = array(
 			</div>
 
 			<!-- RIGHT: CROSSFADING CARDS -->
-			<div class="flex-3 st-scroll-flick-stack w-full">
+			<div class="flex-3 st-scroll-flick-stack w-full st-parallax-horizontal">
 				<?php foreach ( $scroll_flick_cards as $card_index => $card ) : ?>
 					<div class="st-scroll-card bg-secondary-t20 border-secondary border-t-8 shadow-lg<?= 0 === $card_index ? ' is-active' : ''; ?>">
 						<div class="pt-12 px-12">

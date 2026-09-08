@@ -26,7 +26,7 @@ $quote_photo = 'https://chocolate-zebra-256559.hostingersite.com/wp-content/uplo
 <?= $gbo_container_width; ?> 
 <?= $gbo_hide_main_content == true ? 'py-12' : '' ?>
 ">
-	<div class="flex flex-col md:flex-row items-center gap-8 shadow-2xl st-bg-fade-primary-dp-p-d border-secondary border-l-8 st-parallax pt-8">
+	<div class="flex flex-col md:flex-row items-center gap-8 shadow-2xl st-bg-fade-primary-dp-p-d border-secondary border-l-8 st-parallax-horizontal pt-8">
 		<div class="flex-2 shrink-0 w-full aspect-square overflow-hidden st-reveal-scale">
 			<img class="!w-full !h-full object-cover" src="<?php echo esc_url( $quote_photo ); ?>" alt="<?php echo esc_attr( $quote_name ); ?>">
 		</div>

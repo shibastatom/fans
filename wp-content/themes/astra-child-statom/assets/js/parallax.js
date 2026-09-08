@@ -1,8 +1,9 @@
 /**
  * Generic subtle scroll parallax.
  *
- * Any element with `.st-parallax` shifts vertically as the page scrolls,
- * offset from its natural position based on how far it is from the
+ * Any element with `.st-parallax` shifts vertically as the page scrolls.
+ * Use `.st-parallax-horizontal` to shift it horizontally instead. Both are
+ * offset from their natural position based on how far they are from the
  * vertical center of the viewport. Optional `data-parallax-speed` (a
  * small decimal, default 0.08) controls how strong the effect is - keep
  * it small for a subtle movement.
@@ -18,7 +19,7 @@
 	}
 
 	function initParallax() {
-		var elements = document.querySelectorAll( '.st-parallax' );
+		var elements = document.querySelectorAll( '.st-parallax, .st-parallax-horizontal' );
 
 		if ( ! elements.length ) {
 			return;
@@ -34,7 +35,9 @@
 				var speed = parseFloat( el.dataset.parallaxSpeed ) || 0.1;
 				var offset = clamp( distanceFromCenter * speed * 1, -160, 160 );
 
-				el.style.transform = 'translateY(' + offset + 'px)';
+				var axis = el.classList.contains( 'st-parallax-horizontal' ) ? 'X' : 'Y';
+
+				el.style.transform = 'translate' + axis + '(' + offset + 'px)';
 			} );
 		}
 
