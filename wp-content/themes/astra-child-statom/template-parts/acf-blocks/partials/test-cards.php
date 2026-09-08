@@ -27,6 +27,15 @@ switch ( $get_gbo_cards_set ) {
 	case 'philosophy':
 		$chosen_cards_set = 'philosophy';
 		break;
+	case 'safety':
+		$chosen_cards_set = 'safety';
+		break;
+	case 'sustainability':
+		$chosen_cards_set = 'sustainability';
+		break;
+	case 'priorities':
+		$chosen_cards_set = 'priorities';
+		break;
 	default:
 		$chosen_cards_set = 'philosophy';
 		break;
@@ -41,6 +50,7 @@ $gsc_features_cards_chosen_set = array_map( function ( $card ) {
 		'icon'  => $card['font_awesome_icon_class'] ?? '',
 		'title' => $card['heading'] ?? '',
 		'copy'  => $card['content'] ?? '',
+		'copy_alt'  => $card['content_alt'] ?? '',
 	);
 }, $gsc_features_cards_chosen_set );
 // var_dump($chosen_cards_set );
@@ -102,28 +112,15 @@ if ( empty( $feature_cards ) ) {
 // var_dump($gbo_additional_part_overlap);
 $overlap_classes = $gbo_additional_part_overlap == true ? 'st-additional-overlap-container' : '';
 
+// Hardcoded for now - swap to preview a different card design. Will be
+// driven by a real field once one exists.
 
-
+$feature_card_design = $gbo_feature_cards_designs ? $gbo_feature_cards_designs : 'design-1';
 ?>
 <div class="<?= $overlap_classes; ?> <?= $gbo_container_width; ?> pb-16">
 	<div class="st-additional-overlap-container-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
 		<?php foreach ( $feature_cards as $card_index => $card ) : ?>
-			<div
-				class="px-6 py-8 border-secondary border-t-8 bg-white shadow-lg st-reveal-scale"
-				style="transition-delay: <?= $card_index * 0.1; ?>s;"
-			>
-				<?php if ( $card['icon'] ) : ?>
-					<i class="<?php echo esc_attr( $card['icon'] ); ?> text-5xl  mb-4" aria-hidden="true"></i>
-				<?php endif; ?>
-
-				<?php if ( $card['title'] ) : ?>
-					<h3 class="mt-4 uppercase !text-secondary font-bold"><?php echo esc_html( $card['title'] ); ?></h3>
-				<?php endif; ?>
-
-				<?php if ( $card['copy'] ) : ?>
-					<p class="mt-2"><?php echo esc_html( $card['copy'] ); ?></p>
-				<?php endif; ?>
-			</div>
+			<?php include __DIR__ . '/feature-card-designs/' . $feature_card_design . '.php'; ?>
 		<?php endforeach; ?>
 	</div>
 </div>

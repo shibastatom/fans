@@ -185,6 +185,8 @@ switch ( $get_gbo_container_width ) {
 }
 
 $gbo_posts_cards_designs = $gbo['posts_cards_designs'];
+$gbo_feature_cards_designs = $gbo['feature_cards_designs'];
+
 
 $gbo_cta_block_options = $gbo['cta_block_options'];
 $gbo_cta_block_options_design = $gbo_cta_block_options['design'];
