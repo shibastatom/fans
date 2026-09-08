@@ -738,7 +738,7 @@ h3 {
   border-bottom-width: 8px;
   border-color: var(--color-secondary);
 }
-.st-parallax, .st-parallax-horizontal {
+.st-parallax, .st-parallax-horizontal, .st-parallax-right-up {
   will-change: transform;
 }
 .st-max-w-60perc {

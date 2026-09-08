@@ -64,7 +64,7 @@ $scroll_flick_cards = array(
 			</div>
 
 			<!-- RIGHT: CROSSFADING CARDS -->
-			<div class="flex-3 st-scroll-flick-stack w-full st-parallax-horizontal">
+			<div class="flex-3 st-scroll-flick-stack w-full st-parallax-right-up">
 				<?php foreach ( $scroll_flick_cards as $card_index => $card ) : ?>
 					<div class="st-scroll-card bg-secondary-t20 border-secondary border-t-8 shadow-lg<?= 0 === $card_index ? ' is-active' : ''; ?>">
 						<div class="pt-12 px-12">
