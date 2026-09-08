@@ -87,6 +87,14 @@ h3 {
 		rgb(from var(--color-secondary) r g b / 17.5%) 100%
 	);
 }
+.st-bg-fade-primary-dp-p-d {
+	background-image: linear-gradient(
+		to top right,
+		rgb(from var(--color-secondary) r g b / 100%) 0,
+		rgb(from var(--color-primary) r g b / 100%) 25%,
+		rgb(from var(--color-primary) r g b / 100%) 100%
+	);
+}
 .st-bg-half-secondary {
 	background-image: linear-gradient(
 		to bottom,
@@ -99,6 +107,13 @@ h3 {
 		to bottom,
 		var(--color-white) 50%,
 		color-mix(in srgb, var(--color-primary), white 0%) 50%
+	);
+}
+.st-bg-third-primary-r {
+	background-image: linear-gradient(
+		to top,
+		var(--color-white) 66.66%,
+		var(--color-primary) 66.66%
 	);
 }
 .st-bg-vignette-primary {

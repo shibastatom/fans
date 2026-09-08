@@ -20,6 +20,7 @@
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
+    --font-weight-normal: 400;
     --font-weight-bold: 700;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -231,9 +232,6 @@
   .mx-auto {
     margin-inline: auto;
   }
-  .mt-1 {
-    margin-top: var(--spacing);
-  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -245,9 +243,6 @@
   }
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
-  }
-  .mr-2 {
-    margin-right: calc(var(--spacing) * 2);
   }
   .\!mb-0 {
     margin-bottom: 0px !important;
@@ -372,9 +367,6 @@
   .justify-center {
     justify-content: center;
   }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
-  }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
@@ -412,6 +404,10 @@
   .border-t-8 {
     border-top-style: var(--tw-border-style);
     border-top-width: 8px;
+  }
+  .border-l-8 {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 8px;
   }
   .border-primary {
     border-color: var(--color-primary);
@@ -527,6 +523,9 @@
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
   }
+  .pt-8 {
+    padding-top: calc(var(--spacing) * 8);
+  }
   .pt-12 {
     padding-top: calc(var(--spacing) * 12);
   }
@@ -571,6 +570,10 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
   .\!text-primary {
     color: var(--color-primary) !important;
   }
@@ -595,6 +598,9 @@
   .text-white {
     color: var(--color-white);
   }
+  .normal-case {
+    text-transform: none;
+  }
   .uppercase {
     text-transform: uppercase;
   }
@@ -606,6 +612,10 @@
   }
   .opacity-80 {
     opacity: 80%;
+  }
+  .shadow-2xl {
+    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
@@ -767,6 +777,9 @@ h3 {
 .st-bg-fade-secondary-1-r {
   background-image: linear-gradient(	to top,	rgb(from var(--color-secondary) r g b / 0%) 0,	rgb(from var(--color-secondary) r g b / 0%) 1rem,	rgb(from var(--color-secondary) r g b / 17.5%) 100%	);
 }
+.st-bg-fade-primary-dp-p-d {
+  background-image: linear-gradient(	to top right,	rgb(from var(--color-secondary) r g b / 100%) 0,	rgb(from var(--color-primary) r g b / 100%) 25%,	rgb(from var(--color-primary) r g b / 100%) 100%	);
+}
 .st-bg-half-secondary {
   background-image: linear-gradient(	to bottom,	var(--color-white) 50%,	color-mix(in srgb, #967d54, white 15%) 50%	);
   @supports (color: color-mix(in lab, red, red)) {
@@ -778,6 +791,9 @@ h3 {
   @supports (color: color-mix(in lab, red, red)) {
     background-image: linear-gradient(	to bottom,	var(--color-white) 50%,	color-mix(in srgb, var(--color-primary), white 0%) 50%	);
   }
+}
+.st-bg-third-primary-r {
+  background-image: linear-gradient(	to top,	var(--color-white) 66.66%,	var(--color-primary) 66.66%	);
 }
 .st-bg-vignette-primary {
   background-image: linear-gradient(		to bottom right,	color-mix(in srgb, #252a35, black 80%),	var(--color-primary) 80%,	color-mix(in srgb, #252a35, black 80%)	);

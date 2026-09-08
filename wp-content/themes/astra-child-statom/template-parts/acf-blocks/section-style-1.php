@@ -62,5 +62,8 @@ $design = $gbo['section_design'];
 		<?php if ( $gbo_additional_part === 'post-collection' ) : ?>
 			<?php include __DIR__ . '/partials/post-collection.php'; ?>
 		<?php endif; ?>
+		<?php if ( $gbo_additional_part === 'quote' ) : ?>
+			<?php include __DIR__ . '/partials/quote.php'; ?>
+		<?php endif; ?>
 	</div>
 </section>
