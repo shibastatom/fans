@@ -100,12 +100,12 @@ $sticky_cards = $process_steps;
 <div class="<?= $gbo_container_width; ?> pb-16">
 	<div class="flex flex-col md:flex-row items-start gap-8">
 		<!-- LEFT: STICKY COPY -->
-		<div class="flex-1 md:sticky md:top-24">
+		<div class="flex-2 md:sticky md:top-24">
 			<?php include __DIR__ . '/../partials/heading-block.php'; ?>
 		</div>
 
 		<!-- RIGHT: SCROLLING CARDS -->
-		<div class="flex-2 flex flex-col gap-8">
+		<div class="flex-3 flex flex-col gap-8">
 			<?php foreach ( $sticky_cards as $step_index => $step ) : ?>
 				<div
 				class="flex gap-6 items-start st-reveal-scale"
@@ -125,13 +125,18 @@ $sticky_cards = $process_steps;
 					?>
 					<div class="grid grid-cols-1 <?= 2 === $step['columns'] ? 'md:grid-cols-2' : ''; ?> gap-x-8">
 						<?php foreach ( $step_columns as $step_column ) : ?>
-							<ul class="list-disc pl-5 space-y-1">
+							<ul class="list-none pl-0 space-y-2 !m-0">
 								<?php foreach ( $step_column as $item ) : ?>
-									<li class="text-primary">
-										<?php if ( ! empty( $item['label'] ) ) : ?>
-											<strong><?php echo esc_html( $item['label'] ); ?>:</strong>
-										<?php endif; ?>
-										<?php echo esc_html( $item['text'] ); ?>
+									<li class="flex items-start gap-3 text-primary">
+										<span class="st-icon-circle shrink-0 mb-2">
+											<i class="fa-solid fa-thumbs-up text-xs" aria-hidden="true"></i>
+										</span>
+										<span>
+											<?php if ( ! empty( $item['label'] ) ) : ?>
+												<strong><?php echo esc_html( $item['label'] ); ?>:</strong>
+											<?php endif; ?>
+											<?php echo esc_html( $item['text'] ); ?>
+										</span>
 									</li>
 								<?php endforeach; ?>
 							</ul>
