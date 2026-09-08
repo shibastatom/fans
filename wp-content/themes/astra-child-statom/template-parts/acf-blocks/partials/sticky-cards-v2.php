@@ -105,7 +105,7 @@ $sticky_cards = $process_steps;
 		</div>
 
 		<!-- RIGHT: SCROLLING CARDS -->
-		<div class="flex-3 flex flex-col gap-8">
+		<div class="flex-3 flex flex-col gap-8 st-parallax-right-up">
 			<?php foreach ( $sticky_cards as $step_index => $step ) : ?>
 				<div
 				class="flex gap-6 items-start st-reveal-scale"
