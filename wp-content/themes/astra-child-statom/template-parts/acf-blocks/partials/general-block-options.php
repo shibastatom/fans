@@ -194,6 +194,21 @@ $gbo_feature_cards_designs = $gbo['feature_cards_designs'];
 $gbo_cta_block_options = $gbo['cta_block_options'];
 $gbo_cta_block_options_design = $gbo_cta_block_options['design'];
 $gbo_cta_block_options_cta_block_card = $gbo_cta_block_options['cta_block_card'];
+$gbo_max_grid_rows = $gbo['max_grid_rows'];
+$gbo_max_grid_rows_classes = '';
+switch ( $gbo_max_grid_rows ) {
+	case 1:
+		$gbo_max_grid_rows_classes = 'md:grid-cols-1';
+		break;
+	case 2:
+		$gbo_max_grid_rows_classes = 'sm:grid-cols-2 md:grid-cols-2';
+		break;
+	default:
+		$gbo_max_grid_rows_classes = 'sm:grid-cols-2 md:grid-cols-4';
+		break;
+}
+// var_dump($gbo_max_grid_rows);
+// var_dump($gbo_max_grid_rows_classes);
 
 
 

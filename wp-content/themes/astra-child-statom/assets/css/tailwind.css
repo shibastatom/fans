@@ -698,6 +698,9 @@
     .md\:w-\[66\%\] {
       width: 66%;
     }
+    .md\:grid-cols-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
     .md\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -781,7 +784,7 @@ h3 {
   background-image: linear-gradient(	to top,	rgb(from var(--color-secondary) r g b / 0%) 0,	rgb(from var(--color-secondary) r g b / 0%) 1rem,	rgb(from var(--color-secondary) r g b / 17.5%) 100%	);
 }
 .st-bg-fade-primary-dp-p-d {
-  background-image: linear-gradient(	to top right,	rgb(from var(--color-secondary) r g b / 100%) 0,	rgb(from var(--color-primary) r g b / 100%) 25%,	rgb(from var(--color-primary) r g b / 100%) 100%	);
+  background-image: linear-gradient( to bottom left, rgb(from var(--color-secondary) r g b / 100%) 0%, rgb(from var(--color-primary) r g b / 100%) 33%, rgb(from var(--color-primary) r g b / 100%) 100% );
 }
 .st-bg-half-secondary {
   background-image: linear-gradient(	to bottom,	var(--color-white) 50%,	color-mix(in srgb, #967d54, white 15%) 50%	);
