@@ -1,5 +1,5 @@
 <div
-    class="st-reveal-scale st-test-card-d3 bg-white"
+    class="st-reveal-scale"
     style="transition-delay: <?= $card_index * 0.1; ?>s;"
 >
     <?php if ( $card['icon'] ) : ?>
@@ -7,7 +7,7 @@
     <?php endif; ?>
 
     <?php if ( $card['title'] ) : ?>
-        <h3 class="mt-4 uppercase font-bold"><?php echo esc_html( $card['title'] ); ?></h3>
+        <h3 class="mt-4 uppercase !text-secondary font-bold"><?php echo esc_html( $card['title'] ); ?></h3>
     <?php endif; ?>
 
     <?php if ( $card['copy'] ) : ?>

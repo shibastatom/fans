@@ -448,6 +448,9 @@
   .bg-secondary {
     background-color: var(--color-secondary);
   }
+  .bg-secondary\! {
+    background-color: var(--color-secondary) !important;
+  }
   .bg-secondary-t10 {
     background-color: var(--color-secondary-t10);
   }
@@ -778,10 +781,10 @@ h3 {
   }
 }
 .st-bg-fade-secondary-1 {
-  background-image: linear-gradient(	to bottom,	rgb(from var(--color-secondary) r g b / 0%) 0,	rgb(from var(--color-secondary) r g b / 0%) 1rem,	rgb(from var(--color-secondary) r g b / 17.5%) 100%	);
+  background-image: linear-gradient(	to bottom,	rgb(from var(--color-secondary) r g b / 0%) 0,	rgb(from var(--color-secondary) r g b / 0%) 1rem,		rgb(from var(--color-secondary) r g b / 10%) 100%	);
 }
 .st-bg-fade-secondary-1-r {
-  background-image: linear-gradient(	to top,	rgb(from var(--color-secondary) r g b / 0%) 0,	rgb(from var(--color-secondary) r g b / 0%) 1rem,	rgb(from var(--color-secondary) r g b / 17.5%) 100%	);
+  background-image: linear-gradient(	to top,	rgb(from var(--color-secondary) r g b / 0%) 0,	rgb(from var(--color-secondary) r g b / 0%) 1rem,		rgb(from var(--color-secondary) r g b / 10%) 100%	);
 }
 .st-bg-fade-primary-dp-p-d {
   background-image: linear-gradient( to bottom left, rgb(from var(--color-secondary) r g b / 100%) 0%, rgb(from var(--color-primary) r g b / 100%) 33%, rgb(from var(--color-primary) r g b / 100%) 100% );
@@ -859,6 +862,9 @@ h3 {
   color: var(--color-white) !important;
 }
 .bg-secondary, .bg-secondary\/90, .bg-secondary\/80, .bg-secondary\/70, .bg-secondary\/50, .bg-secondary :is(h1, h2, h3, h4, h5, h6), .bg-secondary\/90 :is(h1, h2, h3, h4, h5, h6), .bg-secondary\/80 :is(h1, h2, h3, h4, h5, h6), .bg-secondary\/70 :is(h1, h2, h3, h4, h5, h6), .bg-secondary\/50 :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--color-black) !important;
+}
+.bg-white, .bg-white\/90, .bg-white\/80, .bg-white\/70, .bg-white\/50, .bg-white :is(h1, h2, h3, h4, h5, h6), .bg-white\/90 :is(h1, h2, h3, h4, h5, h6), .bg-white\/80 :is(h1, h2, h3, h4, h5, h6), .bg-white\/70 :is(h1, h2, h3, h4, h5, h6), .bg-white\/50 :is(h1, h2, h3, h4, h5, h6) {
   color: var(--color-black) !important;
 }
 .st-btn-primary {
@@ -1099,6 +1105,21 @@ h3 {
   transform: scale(1);
   pointer-events: auto;
   z-index: 1;
+}
+.st-test-card-d3 {
+  border-top-style: var(--tw-border-style);
+  border-top-width: 8px;
+  border-color: var(--color-secondary);
+  background-color: var(--color-primary);
+  padding-inline: calc(var(--spacing) * 6);
+  padding-block: calc(var(--spacing) * 8);
+  text-align: center;
+  --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.bg-primary .st-test-card-d3 {
+  border-color: var(--color-primary);
+  background-color: var(--color-white);
 }
 .wpcf7-form-control {
   border: 2px solid var(--color-secondary) !important;

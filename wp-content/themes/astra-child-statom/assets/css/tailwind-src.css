@@ -78,7 +78,8 @@ h3 {
 		to bottom,
 		rgb(from var(--color-secondary) r g b / 0%) 0,
 		rgb(from var(--color-secondary) r g b / 0%) 1rem,
-		rgb(from var(--color-secondary) r g b / 17.5%) 100%
+		/* rgb(from var(--color-secondary) r g b / 17.5%) 100% */
+		rgb(from var(--color-secondary) r g b / 10%) 100%
 	);
 }
 .st-bg-fade-secondary-1-r {
@@ -86,7 +87,8 @@ h3 {
 		to top,
 		rgb(from var(--color-secondary) r g b / 0%) 0,
 		rgb(from var(--color-secondary) r g b / 0%) 1rem,
-		rgb(from var(--color-secondary) r g b / 17.5%) 100%
+		/* rgb(from var(--color-secondary) r g b / 17.5%) 100% */
+		rgb(from var(--color-secondary) r g b / 10%) 100%
 	);
 }
 /* .st-bg-fade-primary-dp-p-d {
@@ -198,6 +200,19 @@ h3 {
 .bg-secondary\/80 :is(h1, h2, h3, h4, h5, h6),
 .bg-secondary\/70 :is(h1, h2, h3, h4, h5, h6),
 .bg-secondary\/50 :is(h1, h2, h3, h4, h5, h6) {
+	@apply !text-black;
+}
+
+.bg-white,
+.bg-white\/90,
+.bg-white\/80,
+.bg-white\/70,
+.bg-white\/50,
+.bg-white :is(h1, h2, h3, h4, h5, h6),
+.bg-white\/90 :is(h1, h2, h3, h4, h5, h6),
+.bg-white\/80 :is(h1, h2, h3, h4, h5, h6),
+.bg-white\/70 :is(h1, h2, h3, h4, h5, h6),
+.bg-white\/50 :is(h1, h2, h3, h4, h5, h6) {
 	@apply !text-black;
 }
 
@@ -395,6 +410,15 @@ h3 {
 	pointer-events: auto;
 	z-index: 1;
 }
+
+/* CARD DESIGN */
+.st-test-card-d3 {
+	@apply px-6 py-8 text-center bg-primary shadow-lg border-secondary border-t-8;
+}
+.bg-primary .st-test-card-d3 {
+	@apply bg-white border-primary;
+}
+
 
 /* *** CONTACT FORM 7 RELATED *** */
 .wpcf7-form-control {

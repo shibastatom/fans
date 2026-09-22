@@ -203,6 +203,9 @@ switch ( $gbo_max_grid_rows ) {
 	case 2:
 		$gbo_max_grid_rows_classes = 'sm:grid-cols-2 md:grid-cols-2';
 		break;
+	case 3:
+		$gbo_max_grid_rows_classes = 'sm:grid-cols-2 md:grid-cols-3';
+		break;
 	default:
 		$gbo_max_grid_rows_classes = 'sm:grid-cols-2 md:grid-cols-4';
 		break;

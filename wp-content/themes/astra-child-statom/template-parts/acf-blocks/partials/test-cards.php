@@ -36,6 +36,9 @@ switch ( $get_gbo_cards_set ) {
 	case 'priorities':
 		$chosen_cards_set = 'priorities';
 		break;
+	case 'values':
+		$chosen_cards_set = 'values';
+		break;
 	default:
 		$chosen_cards_set = 'philosophy';
 		break;
@@ -118,7 +121,7 @@ $overlap_classes = $gbo_additional_part_overlap == true ? 'st-additional-overlap
 $feature_card_design = $gbo_feature_cards_designs ? $gbo_feature_cards_designs : 'design-1';
 ?>
 <div class="<?= $overlap_classes; ?> <?= $gbo_container_width; ?> pb-16">
-	<div class="st-additional-overlap-container-content grid grid-cols-1 <?= $gbo_max_grid_rows_classes; ?> gap-4">
+	<div class="st-additional-overlap-container-content grid grid-cols-1 <?= $gbo_max_grid_rows_classes; ?> gap-4 w-full">
 		<?php foreach ( $feature_cards as $card_index => $card ) : ?>
 			<?php include __DIR__ . '/feature-card-designs/' . $feature_card_design . '.php'; ?>
 		<?php endforeach; ?>
